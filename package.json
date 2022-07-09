@@ -1,26 +1,57 @@
 {
+  "private": true,
   "name": "montage",
   "version": "1.0.0",
-  "description": "montage",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "prepublishOnly": "npm run build",
     "publish": "pnpm changeset version && pnpm changeset publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bigbigDreamer/montage.git"
+  "files": [
+    "dist"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bigbigDreamer/montage/issues"
-  },
-  "homepage": "https://github.com/bigbigDreamer/montage#readme",
-  "volta": {
-    "node": "14.19.3"
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
   },
   "dependencies": {
-    "@changesets/cli": "^2.23.1"
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "rollup": "^2.76.0",
+    "rollup-plugin-swc": "^0.2.1"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.2.211",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^13.0.0",
+    "@types/jest": "^27.0.3",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "@umijs/fabric": "^2.8.1",
+    "@umijs/test": "^3.0.5",
+    "dumi": "^1.1.0",
+    "esbuild": "^0.14.48",
+    "father": "^4.0.0-rc.2",
+    "gh-pages": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.1",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "yorkie": "^2.0.0"
   }
 }

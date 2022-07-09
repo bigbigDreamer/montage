@@ -1,1 +1,1 @@
-console.log(process.env.NPM_TOKEN)
+console.log(process.env.NPM_TOKEN, 'jjjj')

@@ -1,17 +1,33 @@
-# Montage
+# montage
 
-## 定义
+## Getting Started
 
->蒙太奇（Montage）在法语是“剪接”的意思，但到了俄国它被发展成一种电影中镜头组合的理论，在涂料、涂装行业蒙太奇也是独树一帜的艺术手法和自由式涂装的含义。
+Install dependencies,
 
->当不同镜头拼接在一起时，往往又会产生各个镜头单独存在时所不具有的特定含义。写作时采用这种方法写作的方式也叫蒙太奇手法。
+```bash
+$ npm i
+```
 
-## 衍射
+Start the dev server,
 
-`pnpm` + `changeset` + `rollup` + `esbuild` 构建 `monorepo` 的试点田。
+```bash
+$ npm start
+```
 
-> `mono` 意为 `单细胞多核`
+Build documentation,
 
+```bash
+$ npm run docs:build
+```
 
+Run test,
 
+```bash
+$ npm test
+```
 
+Build library via `father`,
+
+```bash
+$ npm run build
+```
