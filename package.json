@@ -1,0 +1,26 @@
+{
+  "name": "montage",
+  "version": "1.0.0",
+  "description": "montage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "pnpm changeset version && pnpm changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigbigDreamer/montage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigbigDreamer/montage/issues"
+  },
+  "homepage": "https://github.com/bigbigDreamer/montage#readme",
+  "volta": {
+    "node": "14.19.3"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.23.1"
+  }
+}
