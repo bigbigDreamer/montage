@@ -1,7 +1,12 @@
 {
     "$schema": "https://unpkg.com/@changesets/config@2.0.1/schema.json",
-    "changelog": "@changesets/changelog-github",
-    "commit": false,
+    "changelog": [
+        "@changesets/changelog-github",
+        {
+            "repo": "bigbigDreamer/montage"
+        }
+    ],
+    "commit": true,
     "fixed": [],
     "linked": [],
     "access": "public",
