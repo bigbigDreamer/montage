@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import swc from 'rollup-plugin-swc'
-import { minify }  from 'rollup-plugin-esbuild'
+import swc from 'rollup-plugin-swc';
+import { minify } from 'rollup-plugin-esbuild';
 import cleaner from 'rollup-plugin-cleaner';
 import babel from '@rollup/plugin-babel';
 import image from '@rollup/plugin-image';
@@ -19,8 +19,8 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const external = ['react', 'react-dom', '@waline/client'];
 
-export default  {
-    input: "./src/index.tsx",
+export default {
+    input: './src/index.tsx',
     output: [
         {
             file: './lib/index.js',
@@ -42,10 +42,7 @@ export default  {
         // 帮助 rollup 查找 commonjs 规范的模块, 常配合 rollup-plugin-node-resolve 一起使用
         commonjs(),
         cleaner({
-            targets: [
-                './es/',
-                './lib/',
-            ]
+            targets: ['./es/', './lib/'],
         }),
         postcss({
             plugins: [simplevars(), nested(), autoprefixer()],
@@ -64,7 +61,7 @@ export default  {
         image(),
         // swc 提供 jsx runtime
         swc({
-            exclude: [".*.js$", ".*.map$",".*.d.ts$"],
+            exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
             // env: {
             //     coreJs: '3.21.1',
             //     mode: 'usage',
@@ -84,15 +81,15 @@ export default  {
                     },
                 },
                 target: 'es2016',
-            }
+            },
         }),
         // babel import 实现按需加载
         babel({
             extensions,
             exclude: /node_modules/,
-            configFile: './babel.config.js'
+            configFile: './babel.config.js',
         }),
         // esbuild 压缩代码
-        // minify(),
+        minify(),
     ],
-}
+};
