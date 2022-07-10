@@ -4,13 +4,14 @@
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
+    "build": "pnpm --filter ./packages/** run build",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
-    "publish": "pnpm changeset version && pnpm changeset publish"
+    "publish": "pnpm changeset && pnpm changeset version && pnpm changeset publish"
   },
   "files": [
     "dist"

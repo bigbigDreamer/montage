@@ -1,7 +1,11 @@
+import { CSSProperties } from 'react';
 import '@waline/client/dist/waline.css';
-import type { WalineInstance, WalineInitOptions } from "@waline/client";
-export interface ReactWalineClientProps extends Omit<WalineInitOptions, "el"> {
+import './index.less';
+import type { WalineInstance, WalineInitOptions } from '@waline/client';
+export interface ReactWalineClientProps extends Omit<WalineInitOptions, 'el'> {
     path?: string;
+    className?: string;
+    style?: CSSProperties;
 }
 export declare type CRefProps = {
     update: WalineInstance['update'];
