@@ -1,18 +1,33 @@
 {
-  "name": "@montagejs/react-waline-client",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
-  },
-  "author": "",
-  "license": "ISC",
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "@rollup/plugin-babel": "^5.3.1"
-  }
+    "name": "@montagejs/react-waline-client",
+    "version": "1.0.0",
+    "description": "react waline client",
+    "main": "./lib/index.js",
+    "module": "./es/index.js",
+    "types": "./es/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c && tsc"
+    },
+    "author": "",
+    "license": "ISC",
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "react",
+        "waline"
+    ],
+    "peerDependencies": {
+        "react": ">=16.8.0",
+        "react-dom": ">=16.8.0"
+    },
+    "dependencies": {
+        "@waline/client": "^2.6.1",
+        "classnames": "^2.3.1"
+    },
+    "files": [
+        "es",
+        "lib"
+    ]
 }
