@@ -37,6 +37,7 @@
     "rollup-plugin-swc": "^0.2.1"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.5",
     "@changesets/cli": "^2.23.1",
     "@rollup/plugin-image": "^2.1.1",
     "@swc/core": "^1.2.211",
