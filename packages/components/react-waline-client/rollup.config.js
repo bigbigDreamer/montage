@@ -15,9 +15,9 @@ import nested from 'postcss-nested';
 import autoprefixer from 'autoprefixer';
 import progress from 'rollup-plugin-progress';
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const extensions = ['js', 'jsx', 'ts', 'tsx'];
 
-const external = ['react', 'react-dom', '@waline/client'];
+const external = ['react', 'react-dom', '@waline/client', 'classnames'];
 
 export default {
     input: './src/index.tsx',
@@ -62,6 +62,7 @@ export default {
         // swc 提供 jsx runtime
         swc({
             exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
+            // 暂时关闭 corJs
             // env: {
             //     coreJs: '3.21.1',
             //     mode: 'usage',

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useImperativeHandle, forwardRef, CSSProperties } from 'react';
+import { useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
 import { init } from '@waline/client';
 import classes from 'classnames';
 
@@ -7,6 +7,8 @@ import '@waline/client/dist/waline.css';
 import './index.less';
 
 import type { WalineInstance, WalineInitOptions } from '@waline/client';
+
+import type { CSSProperties } from 'react';
 
 export interface ReactWalineClientProps extends Omit<WalineInitOptions, 'el'> {
     path?: string;
