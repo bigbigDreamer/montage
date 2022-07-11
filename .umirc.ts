@@ -6,10 +6,10 @@ export default defineConfig({
     logo: 'https://cdn.jsdelivr.net/gh/bigbigDreamer/pic-bed@main/uPic/SYcWVv.jpg',
     outputPath: 'docs-dist',
     mode: 'site',
-    publicPath: './',
-    history: {
-        type: 'hash',
-    },
+    // publicPath: './',
+    // history: {
+    //     type: 'hash',
+    // },
     resolve: {
         includes: ['docs'],
         previewLangs: [],
