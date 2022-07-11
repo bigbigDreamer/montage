@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.0.4
+
+### Patch Changes
+
+- fix: fix since bundle , transform a simple way to bundle for less size
+
 ## 0.0.3
 
 ### Patch Changes
