@@ -18,8 +18,8 @@ jobs:
         uses: actions/setup-node@v3 # 配置脚本来自 https://github.com/actions/setup-node
         with:
           node-version: "14"
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         id: pnpm-install
         with:
           version: 6
