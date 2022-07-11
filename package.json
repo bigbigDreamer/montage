@@ -5,6 +5,8 @@
   "scripts": {
     "start": "dumi dev",
     "build": "pnpm --filter ./packages/** run build",
+    "build:nx": "nx run-many --target=build --all",
+    "analyze": "nx graph",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
@@ -58,6 +60,7 @@
     "gh-pages": "^3.0.0",
     "less": "^4.1.3",
     "lint-staged": "^10.0.7",
+    "nx": "14.4.2",
     "postcss-nested": "^5.0.6",
     "postcss-simple-vars": "^6.0.3",
     "prettier": "^2.2.1",
