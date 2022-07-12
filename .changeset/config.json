@@ -3,17 +3,13 @@
     "changelog": [
         "@changesets/changelog-github",
         {
-            "repo": "bigbigDreamer/montage",
-            "author": "scholar"
+            "repo": "bigbigDreamer/montage"
         }
     ],
-    "commit": true,
-    "fixed": [],
-    "linked": [],
+    "commit": false,
     "access": "public",
     "baseBranch": "main",
     "updateInternalDependencies": "patch",
-    "ignore": [],
     "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
         "onlyUpdatePeerDependentsWhenOutOfRange": true
     }

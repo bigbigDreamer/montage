@@ -1,0 +1,31 @@
+name: Release
+
+on:
+    push:
+        branches:
+            - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+    release:
+        name: Release
+        runs-on: ubuntu-latest
+        steps:
+            - name: Use Node.js 14 # 配置Node
+              uses: actions/setup-node@v3 # 配置脚本来自 https://github.com/actions/setup-node
+              with:
+                node-version: "14"
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2.0.1
+              id: pnpm-install
+              with:
+                version: 6
+                run_install: false
+
+            - run: pnpm install
+
+            - name: Create Release Pull Request
+              uses: changesets/action@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
