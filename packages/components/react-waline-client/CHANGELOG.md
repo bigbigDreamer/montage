@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.0.5
+
+### Patch Changes
+
+- fix: fix className props cant receive
+
 ## 0.0.4
 
 ### Patch Changes
