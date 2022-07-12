@@ -26,7 +26,7 @@ const ReactWalineClient = forwardRef<CRefProps, ReactWalineClientProps>(
         const walineInstanceRef = useRef<Partial<WalineInstance>>({});
         const containerRef = useRef<HTMLDivElement | null>(null);
 
-        const containerCls = classes('montage-react-waline-client_container');
+        const containerCls = classes('montage-react-waline-client_container', className);
 
         useEffect(() => {
             walineInstanceRef.current = init({
