@@ -2,3 +2,4 @@ es
 lib
 package-lock.json
 node_modules
+dist

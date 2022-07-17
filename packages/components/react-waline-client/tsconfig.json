@@ -3,18 +3,5 @@
     "compilerOptions": {
         "outDir": "./es/",
         "emitDeclarationOnly": true
-    },
-    "exclude": [
-        "node_modules",
-        "lib",
-        "es",
-        "dist",
-        "**/__tests__",
-        "**/__test__",
-        "**/demo",
-        "rollup.config.js",
-        "types",
-        "jest.config.js",
-        "babel.config.js"
-    ]
+    }
 }

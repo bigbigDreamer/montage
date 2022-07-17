@@ -4,12 +4,13 @@
     "description": "react waline client",
     "main": "./lib/index.js",
     "module": "./es/index.js",
+    "unpkg": "./dist/index.js",
     "types": "./es/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rollup -c && tsc"
     },
-    "author": "",
+    "author": "bigdreamer(不换)",
     "license": "ISC",
     "publishConfig": {
         "access": "public"

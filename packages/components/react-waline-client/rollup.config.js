@@ -14,6 +14,7 @@ import nested from 'postcss-nested';
 // autoPrefix
 import autoprefixer from 'autoprefixer';
 import progress from 'rollup-plugin-progress';
+import generateStyle from '@montagejs/rollup-plugin-generate-style';
 
 const extensions = ['js', 'jsx', 'ts', 'tsx'];
 
@@ -33,6 +34,12 @@ export default {
             sourcemap: true,
             format: 'esm',
         },
+        {
+            file: './dist/index.js',
+            sourcemap: false,
+            format: 'umd',
+            name: 'ReactWalineClient',
+        },
     ],
     external,
     plugins: [
@@ -42,11 +49,12 @@ export default {
         // 帮助 rollup 查找 commonjs 规范的模块, 常配合 rollup-plugin-node-resolve 一起使用
         commonjs(),
         cleaner({
-            targets: ['./es/', './lib/'],
+            targets: ['./es/', './lib/', '.dist'],
         }),
         postcss({
             plugins: [simplevars(), nested(), autoprefixer()],
             minimize: true,
+            // extract: 'style/index.css',
             // 处理.css和.less文件
             extensions: ['.less', '.css'],
             use: [
@@ -90,6 +98,7 @@ export default {
             exclude: /node_modules/,
             configFile: './babel.config.js',
         }),
+        generateStyle(),
         // esbuild 压缩代码
         minify(),
     ],
