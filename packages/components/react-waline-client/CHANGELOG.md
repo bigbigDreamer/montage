@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.0.7
+
+### Patch Changes
+
+- feat: add unpkg cdn for dist
+
 ## 0.0.6
 
 ### Patch Changes

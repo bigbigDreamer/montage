@@ -1,0 +1,31 @@
+{
+    "name": "@montagejs/rollup-plugin-generate-style",
+    "version": "0.0.1",
+    "description": "rollup plugin for generate style with babel-plugin-import",
+    "main": "./lib/index.js",
+    "module": "./es/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c && tsc"
+    },
+    "author": "bigdreamer(不换)",
+    "license": "ISC",
+    "dependencies": {
+        "fs-extra": "^10.1.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^9.0.13"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "es",
+        "lib"
+    ],
+    "keywords": [
+        "rollup",
+        "generate",
+        "style"
+    ]
+}

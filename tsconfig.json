@@ -1,16 +1,29 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "types": ["jest"],
-    "strict": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "declaration": true,
-    "allowSyntheticDefaultImports": true,        /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
-    "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
-  }
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "types": ["jest"],
+        "strict": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "declaration": true,
+        "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,
+        "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    },
+    "exclude": [
+        "node_modules",
+        "lib",
+        "es",
+        "dist",
+        "**/__tests__",
+        "**/__test__",
+        "**/demo",
+        "rollup.config.js",
+        "types",
+        "jest.config.js",
+        "babel.config.js"
+    ]
 }
