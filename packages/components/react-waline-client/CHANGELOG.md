@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.0.8
+
+### Patch Changes
+
+- docs: update docs link
+
 ## 0.0.7
 
 ### Patch Changes

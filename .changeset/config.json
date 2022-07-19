@@ -6,11 +6,10 @@
             "repo": "bigbigDreamer/montage"
         }
     ],
+    "baseBranch": "main",
     "commit": false,
     "access": "public",
-    "baseBranch": "main",
-    "updateInternalDependencies": "patch",
     "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-        "onlyUpdatePeerDependentsWhenOutOfRange": true
+        "updateInternalDependents": "always"
     }
 }

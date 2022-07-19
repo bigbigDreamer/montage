@@ -1,17 +1,38 @@
 # Montage
 
-## 定义
+## Definition
 
->蒙太奇（Montage）在法语是“剪接”的意思，但到了俄国它被发展成一种电影中镜头组合的理论，在涂料、涂装行业蒙太奇也是独树一帜的艺术手法和自由式涂装的含义。
+>Montage means "splicing" in French, but in Russia, it has been developed into a theory of lens combination in films. Montage is also a unique artistic technique and the meaning of Freestyle painting in the paint and coating industry.
 
->当不同镜头拼接在一起时，往往又会产生各个镜头单独存在时所不具有的特定含义。写作时采用这种方法写作的方式也叫蒙太奇手法。
+>When different shots are stitched together, they often in turn create specific meanings that the individual shots do not have when they stand alone. Writing using this method of writing is also called the montage technique.
 
-## 衍射
+## Diffraction
 
-`pnpm` + `changeset` + `rollup` + `esbuild` 构建 `monorepo` 的试点田。
+`pnpm` + `changeset` + `rollup` + `esbuild` build `monorepo` of the pilot field.
 
-> `mono` 意为 `单细胞多核`
+> `mono` means `unicellular multinuclear`
+
+## Todolist
+
+- [x] Use `dumi` as repo docs framework.
+- [x] Use `pnpm` & `changeset` replace `lerna`.
+- [x] Use `github action` auto build docs.
+- [x] Use `esbuild`、`swc` build components.
+- [ ] Use `husky` & `eslint` & `prettier` standard code style.
+- [ ] Try `vuepress` refactor docs site.
+- [ ] Try [`Rush`](https://rushjs.io/) refactor `changeset`.
+- [ ] Use `jest` as unit test tool.
+
+## Vision
+
+Create `montage` tools that remind others.
+
+## Montage Art
 
 
+![](https://cdn.jsdelivr.net/gh/bigbigDreamer/pic-bed@main/uPic/c201912061614384413.jpeg)
 
+## LICENSE
+
+The project use [UnLicense](./LICENSE).
 
