@@ -37,4 +37,5 @@ export default defineConfig({
     },
     // 开启 webpack 5
     webpack5: {},
+    fastRefresh: {},
 });
