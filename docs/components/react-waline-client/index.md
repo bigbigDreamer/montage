@@ -11,6 +11,12 @@ group:
 
 `Waline` 评论客户端 `React` 版本。
 
+## Usage
+
+```bash
+$ npm i @montagejs/react-waline-client --save
+```
+
 #### 使用之前
 
 使用之前，你可能需要先[快速上手](https://waline.js.org/guide/get-started.html)一下服务端部署流程，拥有自己的 `waline` 服务。
