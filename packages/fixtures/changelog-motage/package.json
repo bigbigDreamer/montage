@@ -23,6 +23,7 @@
         "@changesets/types": "^5.1.0"
     },
     "dependencies": {
-        "@octokit/core": "^4.0.4"
+        "@octokit/core": "^4.0.4",
+        "git-commit-info": "^2.0.1"
     }
 }

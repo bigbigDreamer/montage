@@ -3,9 +3,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import swc from 'rollup-plugin-swc';
 import { minify } from 'rollup-plugin-esbuild';
 import cleaner from 'rollup-plugin-cleaner';
-import babel from '@rollup/plugin-babel';
 
-const extensions = ['js', 'jsx', 'ts', 'tsx'];
+const extensions = ['js', 'ts'];
 
 const external = ['@changesets/types'];
 
@@ -22,12 +21,6 @@ export default {
             file: './es/index.js',
             sourcemap: true,
             format: 'esm',
-        },
-        {
-            file: './dist/index.js',
-            sourcemap: false,
-            format: 'umd',
-            name: 'ReactWalineClient',
         },
     ],
     external,

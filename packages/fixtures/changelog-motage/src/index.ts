@@ -4,6 +4,7 @@ import {
     ChangelogFunctions,
     ModCompWithPackage,
 } from '@changesets/types';
+import gitCommitInfo from 'git-commit-info';
 
 const getReleaseLine = async (
     changeset: NewChangesetWithCommit,
@@ -19,6 +20,7 @@ const getReleaseLine = async (
     let prFromSummary: number | undefined;
     let commitFromSummary: string | undefined;
     let usersFromSummary: string[] = [options.author];
+    const { shortHash } = gitCommitInfo();
 
     const replacedChangelog = changeset.summary
         .replace(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/im, (_, pr) => {
@@ -27,7 +29,7 @@ const getReleaseLine = async (
             return '';
         })
         .replace(/^\s*commit:\s*([^\s]+)/im, (_, commit) => {
-            commitFromSummary = commit;
+            commitFromSummary = commit || shortHash;
             return '';
         })
         // .replace(/^\s*(?:author|user):\s*@?([^\s]+)/gim, (_, user) => {
