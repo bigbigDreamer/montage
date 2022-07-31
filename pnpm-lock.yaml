@@ -19,8 +19,8 @@ importers:
       '@testing-library/react': ^13.0.0
       '@types/jest': 28.1.6
       '@types/react': 17.0.2
-      '@types/react-dom': 17.0.17
-      '@umijs/fabric': ^2.8.1
+      '@types/react-dom': 17.0.2
+      '@umijs/fabric': 3.0.0
       '@umijs/test': ^3.0.5
       antd: ^4.21.5
       autoprefixer: ^10.4.7
@@ -67,8 +67,8 @@ importers:
       '@testing-library/react': 13.3.0_react-dom@17.0.2+react@17.0.2
       '@types/jest': 28.1.6
       '@types/react': 17.0.2
-      '@types/react-dom': 17.0.17
-      '@umijs/fabric': 2.12.2
+      '@types/react-dom': 17.0.2
+      '@umijs/fabric': 3.0.0
       '@umijs/test': 3.5.28
       antd: 4.21.5_react-dom@17.0.2+react@17.0.2
       autoprefixer: 10.4.7
@@ -3653,8 +3653,8 @@ packages:
       regenerate-unicode-properties: 9.0.0
     dev: true
 
-  /@umijs/fabric/2.12.2:
-    resolution: {integrity: sha512-3fLQ3SOFmyzEbv0ELUPBRMfgMGNkWtJVnhgMmcvgtOfq4g3croDVKQetxjfjJ3cfYqVGtFfbQJ//RuEdYU3+2A==}
+  /@umijs/fabric/3.0.0:
+    resolution: {integrity: sha512-1mkcltWbSfq0fioR4Bw8mabe1Vjo85LBE84eQM4E5uYXk2qW3zUMrZcp0z8a6RQQDiYitQl3ch8kqaDPStHODw==}
     hasBin: true
     dependencies:
       '@babel/core': 7.18.6
@@ -3679,6 +3679,7 @@ packages:
       fast-glob: 3.2.11
       os-locale: 5.0.0
       prettier: 2.7.1
+      prettier-plugin-organize-imports: 3.0.0_prettier@2.7.1+typescript@4.7.4
       prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
       prettier-plugin-two-style-order: 1.0.1_prettier@2.7.1
       stylelint: 13.13.1
@@ -12082,6 +12083,16 @@ packages:
   /prepend-http/1.0.4:
     resolution: {integrity: sha512-PhmXi5XmoyKw1Un4E+opM2KcsJInDvKyuOumcjjw3waw86ZNjHwVUOOWLc4bCzLdcKNaWBH9e99sbWzDQsVaYg==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /prettier-plugin-organize-imports/3.0.0_prettier@2.7.1+typescript@4.7.4:
+    resolution: {integrity: sha512-juSCJs5TMOqGGPaN/A/1xzWFzRPH2LG1LPLCr64dzKaVnPafJdtgDNmDVlU+8A4LbQzVJg0DTvgA8swBuIUhlg==}
+    peerDependencies:
+      prettier: '>=2.0'
+      typescript: '>=2.9'
+    dependencies:
+      prettier: 2.7.1
+      typescript: 4.7.4
     dev: true
 
   /prettier-plugin-packagejson/2.2.18_prettier@2.7.1:
