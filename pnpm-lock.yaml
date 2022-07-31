@@ -32,7 +32,7 @@ importers:
       gh-pages: ^3.0.0
       less: ^4.1.3
       lint-staged: ^10.0.7
-      nx: 14.4.2
+      nx: 14.5.1
       postcss-nested: ^5.0.6
       postcss-simple-vars: ^6.0.3
       prettier: ^2.2.1
@@ -80,7 +80,7 @@ importers:
       gh-pages: 3.2.3
       less: 4.1.3
       lint-staged: 10.5.4
-      nx: 14.4.2_@swc+core@1.2.211
+      nx: 14.5.1_@swc+core@1.2.211
       postcss-nested: 5.0.6
       postcss-simple-vars: 6.0.3
       prettier: 2.2.1
@@ -2325,20 +2325,20 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@nrwl/cli/14.4.2_@swc+core@1.2.211:
-    resolution: {integrity: sha512-JNV4kP9goZD4BlTQGKdKhCRc1bhiWYp1TaDJHdk4ZfhiLt1NzXNxxgc/eX2obFZ3Hw+KdM/gM5F7KfWBbtSGSw==}
+  /@nrwl/cli/14.5.1_@swc+core@1.2.211:
+    resolution: {integrity: sha512-CWYAK5Oz/hZw82aeReKI0kPKKA0nCgtmf3fw4wVMNfTySW5Umt+08D5ZXG8xshtd4JODa4Lvvqtd7ig2mLh9sw==}
     dependencies:
-      nx: 14.4.2_@swc+core@1.2.211
+      nx: 14.5.1_@swc+core@1.2.211
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
     dev: true
 
-  /@nrwl/tao/14.4.2_@swc+core@1.2.211:
-    resolution: {integrity: sha512-Ygw3skKZfFhi4MBHZKQ8A67pDQxeyDdY78tFWViMN0SEn9ExL41Q8V9aSMfir8VZYGca6ZOXX5MRhbeHdcgMLQ==}
+  /@nrwl/tao/14.5.1_@swc+core@1.2.211:
+    resolution: {integrity: sha512-7A35jJ89Y9W64wLsq1WZfduEIG9Iz1Alb8OWBXB9tpt4ZOuQw2o0LphbxpCPv039c5xQQGMtkD2owd3Xi73bvQ==}
     hasBin: true
     dependencies:
-      nx: 14.4.2_@swc+core@1.2.211
+      nx: 14.5.1_@swc+core@1.2.211
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -5330,7 +5330,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   /concat-with-sourcemaps/1.1.0:
     resolution: {integrity: sha512-4gEjHJFT9e+2W/77h/DS5SGUgwDaOwprX8L/gl5+3ixnzkVJJsZWDSelmN3Oilw3LNDZjZV0yqH1hLG3k6nghg==}
@@ -10381,8 +10381,8 @@ packages:
     resolution: {integrity: sha512-JYOWTeFoS0Z93587vRJgASD5Ut11fYl5NyihP3KrYBvMe1FRRs6RN7m20SA/16GM4P6hTnZjT+UmDOt38UeXNg==}
     dev: true
 
-  /nx/14.4.2_@swc+core@1.2.211:
-    resolution: {integrity: sha512-bYO//HuwQL4X8y+2BjUPtkPLDiYI1zMejQo6+uJl3+VdYPcsjwW/ca581tBPHiPH95XnHiBartnMrMJtn11grw==}
+  /nx/14.5.1_@swc+core@1.2.211:
+    resolution: {integrity: sha512-0QimStCyaw4HpgiJYpdH7NWMEVULKMcXEgPG/Mu3XDQtda/+8plDJ+ftfVo3MfjXIzQ6T7+zo//xESUez0pZ5w==}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -10394,8 +10394,8 @@ packages:
       '@swc/core':
         optional: true
     dependencies:
-      '@nrwl/cli': 14.4.2_@swc+core@1.2.211
-      '@nrwl/tao': 14.4.2_@swc+core@1.2.211
+      '@nrwl/cli': 14.5.1_@swc+core@1.2.211
+      '@nrwl/tao': 14.5.1_@swc+core@1.2.211
       '@parcel/watcher': 2.0.4
       '@swc/core': 1.2.211
       chalk: 4.1.0
