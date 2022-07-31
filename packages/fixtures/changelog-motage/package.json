@@ -1,7 +1,7 @@
 {
-    "name": "@montagejs/react-waline-client",
-    "version": "0.0.8",
-    "description": "react waline client",
+    "name": "@montagejs/changelog-montage",
+    "version": "1.0.0",
+    "description": "changeset log plugin",
     "main": "./lib/index.js",
     "module": "./es/index.js",
     "unpkg": "./dist/index.js",
@@ -15,21 +15,14 @@
     "publishConfig": {
         "access": "public"
     },
-    "keywords": [
-        "react",
-        "waline"
-    ],
-    "peerDependencies": {
-        "react": ">=16.8.0",
-        "react-dom": ">=16.8.0"
-    },
-    "dependencies": {
-        "@waline/client": "^2.6.1",
-        "classnames": "^2.3.1"
-    },
     "files": [
         "es",
-        "lib",
-        "dist"
-    ]
+        "lib"
+    ],
+    "devDependencies": {
+        "@changesets/types": "^5.1.0"
+    },
+    "dependencies": {
+        "@octokit/core": "^4.0.4"
+    }
 }

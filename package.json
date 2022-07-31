@@ -13,7 +13,8 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
-    "publish": "pnpm changeset && pnpm changeset version && pnpm changeset publish"
+    "publish": "pnpm changeset && pnpm changeset version && pnpm changeset publish && changeset tag && pnpm run push",
+    "push": "git add . && git commit -m 'chore(release): publish' && git push --follow-tags"
   },
   "files": [
     "dist"
@@ -30,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "@montagejs/changelog-montage": "^1.0.0",
     "@montagejs/rollup-plugin-generate-style": "0.0.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",
