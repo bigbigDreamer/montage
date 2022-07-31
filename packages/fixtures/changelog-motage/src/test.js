@@ -8,7 +8,7 @@ octokit
     .request(`GET /repos/{owner}/{repo}`, {
         repo: 'montage',
         owner: 'bigbigDreamer',
-        sha: '222dfefefef',
+        sha: '222dfefefesssf',
     })
     .then((res) => {
         console.log(res, 'res');
