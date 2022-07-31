@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.0.9
+
+### Patch Changes
+
+- [`undefined`](https://github.com/bigbigDreamer/montage/commit/undefined) Thanks ! - fix: react waline style
+
 ## 0.0.8
 
 ### Patch Changes
