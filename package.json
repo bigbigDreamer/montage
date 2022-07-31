@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
-    "build": "pnpm --filter packages/** run build",
-    "build:nx": "nx run-many --target=build --all",
+    "build:pnpm": "pnpm --filter packages/** run build",
+    "build": "nx run-many --target=build --all",
     "analyze": "nx graph",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@montagejs/changelog-montage": "workspace:^1.1.1",
+    "@montagejs/changelog-montage": "workspace:^1.2.1",
     "@montagejs/rollup-plugin-generate-style": "0.0.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",

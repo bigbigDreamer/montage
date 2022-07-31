@@ -29,7 +29,7 @@ const getReleaseLine = async (
             return '';
         })
         .replace(/^\s*commit:\s*([^\s]+)/im, (_, commit) => {
-            commitFromSummary = commit || shortHash;
+            commitFromSummary = shortHash || commit;
             return '';
         })
         // .replace(/^\s*(?:author|user):\s*@?([^\s]+)/gim, (_, user) => {

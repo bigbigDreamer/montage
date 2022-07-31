@@ -7,7 +7,7 @@ importers:
       '@changesets/changelog-github': ^0.4.5
       '@changesets/cli': ^2.23.1
       '@changesets/get-github-info': ^0.5.1
-      '@montagejs/changelog-montage': workspace:^1.1.1
+      '@montagejs/changelog-montage': workspace:^1.2.1
       '@montagejs/rollup-plugin-generate-style': 0.0.3
       '@rollup/plugin-babel': ^5.3.1
       '@rollup/plugin-commonjs': ^22.0.1
