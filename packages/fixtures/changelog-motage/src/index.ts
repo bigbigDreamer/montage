@@ -18,7 +18,7 @@ const getReleaseLine = async (
 
     let prFromSummary: number | undefined;
     let commitFromSummary: string | undefined;
-    let usersFromSummary: string[] = [];
+    let usersFromSummary: string[] = [options.author];
 
     const replacedChangelog = changeset.summary
         .replace(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/im, (_, pr) => {
@@ -30,10 +30,10 @@ const getReleaseLine = async (
             commitFromSummary = commit;
             return '';
         })
-        .replace(/^\s*(?:author|user):\s*@?([^\s]+)/gim, (_, user) => {
-            usersFromSummary.push(user);
-            return '';
-        })
+        // .replace(/^\s*(?:author|user):\s*@?([^\s]+)/gim, (_, user) => {
+        //     usersFromSummary.push(user);
+        //     return '';
+        // })
         .trim();
 
     const [firstLine, ...futureLines] = replacedChangelog.split('\n').map((l) => l.trimRight());

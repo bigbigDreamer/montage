@@ -3,7 +3,8 @@
     "changelog": [
         "@montagejs/changelog-montage",
         {
-            "repo": "bigbigDreamer/montage"
+            "repo": "bigbigDreamer/montage",
+            "author": "bigbigDreamer"
         }
     ],
     "baseBranch": "main",
