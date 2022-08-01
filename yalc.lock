@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@montagejs/changelog-montage": {
+      "signature": "b27643b5cf2218b8e4649fdf7ca662cb",
+      "file": true,
+      "replaced": "workspace:^1.2.1"
+    }
+  }
+}

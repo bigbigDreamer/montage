@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@montagejs/changelog-montage": "workspace:^1.2.1",
+    "@montagejs/changelog-montage": "file:.yalc/@montagejs/changelog-montage",
     "@montagejs/rollup-plugin-generate-style": "0.0.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",

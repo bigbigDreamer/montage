@@ -17,10 +17,12 @@ const getReleaseLine = async (
         );
     }
 
+    const { shortHash, ...rest } = gitCommitInfo();
+
+    console.log(shortHash, rest, 'res');
     let prFromSummary: number | undefined;
     let commitFromSummary: string | undefined;
     let usersFromSummary: string[] = [options.author];
-    const { shortHash } = gitCommitInfo();
 
     const replacedChangelog = changeset.summary
         .replace(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/im, (_, pr) => {
