@@ -17,11 +17,10 @@ const getReleaseLine = async (
         );
     }
 
-    const { shortHash, ...rest } = gitCommitInfo();
+    const { shortHash } = gitCommitInfo({ cwd: './' });
 
-    console.log(shortHash, rest, 'res');
     let prFromSummary: number | undefined;
-    let commitFromSummary: string | undefined;
+    let commitFromSummary: string | undefined = shortHash;
     let usersFromSummary: string[] = [options.author];
 
     const replacedChangelog = changeset.summary
@@ -30,14 +29,6 @@ const getReleaseLine = async (
             if (!isNaN(num)) prFromSummary = num;
             return '';
         })
-        .replace(/^\s*commit:\s*([^\s]+)/im, (_, commit) => {
-            commitFromSummary = shortHash || commit;
-            return '';
-        })
-        // .replace(/^\s*(?:author|user):\s*@?([^\s]+)/gim, (_, user) => {
-        //     usersFromSummary.push(user);
-        //     return '';
-        // })
         .trim();
 
     const [firstLine, ...futureLines] = replacedChangelog.split('\n').map((l) => l.trimRight());

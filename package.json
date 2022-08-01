@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@montagejs/changelog-montage": "file:.yalc/@montagejs/changelog-montage",
+    "@montagejs/changelog-montage": "workspace:^1.2.3",
     "@montagejs/rollup-plugin-generate-style": "0.0.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",
@@ -52,6 +52,7 @@
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^13.0.0",
     "@types/jest": "28.1.6",
+    "@types/node": "^18.6.3",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2",
     "@umijs/fabric": "3.0.0",

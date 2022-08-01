@@ -6,7 +6,7 @@ import cleaner from 'rollup-plugin-cleaner';
 
 const extensions = ['js', 'ts'];
 
-const external = ['@changesets/types'];
+const external = ['@changesets/types', 'git-commit-info'];
 
 export default {
     input: './src/index.ts',
@@ -30,7 +30,7 @@ export default {
         // 帮助 rollup 查找 commonjs 规范的模块, 常配合 rollup-plugin-node-resolve 一起使用
         commonjs(),
         cleaner({
-            targets: ['./es/', './lib/', '.dist'],
+            targets: ['./es/', './lib/'],
         }),
         // swc 提供 jsx runtime
         swc({

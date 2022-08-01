@@ -92,3 +92,7 @@ common/autoinstallers/*/.npmrc
 # Heft
 .heft
 
+# yalc
+.yalc
+yalc.lock
+
