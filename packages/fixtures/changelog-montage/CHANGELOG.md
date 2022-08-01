@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.4
+
+### Patch Changes
+
+- [`0fda9bb`](https://github.com/bigbigDreamer/montage/commit/0fda9bb) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix changelog bug
+
 ## 1.2.2
 
 ### Patch Changes
