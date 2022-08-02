@@ -12,7 +12,7 @@ octokit
         sha: '222dfefefesssf',
     })
     .then((res) => {
-        console.log(res, 'res');
+        console.log(res, 'resss');
     })
     .catch((e) => {
         console.log(e, 'ee');
