@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.5
+
+### Patch Changes
+
+- [`ce613a4`](https://github.com/bigbigDreamer/montage/commit/ce613a4) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - docs: add readme
+
 ## 1.2.4
 
 ### Patch Changes

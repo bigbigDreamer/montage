@@ -49,7 +49,7 @@ importers:
       rollup-plugin-swc: ^0.2.1
       yorkie: ^2.0.0
     dependencies:
-      '@montagejs/changelog-montage': link:packages/fixtures/changelog-montage
+      '@montagejs/changelog-montage': link:packages/fixture/changelog-montage
       '@montagejs/rollup-plugin-generate-style': link:packages/plugins/rollup-plugin-generate-style
       '@rollup/plugin-babel': 5.3.1_rollup@2.76.0
       '@rollup/plugin-commonjs': 22.0.1_rollup@2.76.0
