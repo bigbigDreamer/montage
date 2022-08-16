@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/changelog-montage",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "changeset log plugin",
     "main": "lib/index.js",
     "module": "es/index.js",

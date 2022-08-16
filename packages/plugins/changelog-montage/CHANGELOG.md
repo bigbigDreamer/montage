@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.6
+
+### Patch Changes
+
+- [`4a1a4c9`](https://github.com/bigbigDreamer/montage/commit/4a1a4c9) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - docs: add readme for pkg
+
 ## 1.2.5
 
 ### Patch Changes
