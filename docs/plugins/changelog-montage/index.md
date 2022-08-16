@@ -1,8 +1,7 @@
 ---
 nav:
-  path: /fixtures
-  order: 3
-  title: Fixtures
+  path: /plugins
+  order: 2
 group:
   path: /changeset
   title: changeset
