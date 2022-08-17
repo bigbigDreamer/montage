@@ -38,9 +38,9 @@ export default {
             },
             {
                 test: /\.css$/,
-                include: [
-                    resolve("./src")
-                ],
+                // include: [
+                //     resolve("./src")
+                // ],
                 use: ["style-loader", "css-loader"],
             }
         ],

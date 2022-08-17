@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/react-waline-client",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "description": "react waline client",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -24,6 +24,7 @@
         "react-dom": ">=16.8.0"
     },
     "dependencies": {
+        "@montagejs/rollup-plugin-generate-style": "workspace:0.0.3",
         "@waline/client": "^2.6.1",
         "classnames": "^2.3.1"
     },

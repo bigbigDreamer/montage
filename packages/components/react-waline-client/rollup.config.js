@@ -14,10 +14,11 @@ import nested from 'postcss-nested';
 // autoPrefix
 import autoprefixer from 'autoprefixer';
 import progress from 'rollup-plugin-progress';
+import gStyle from '@montagejs/rollup-plugin-generate-style';
 
 const extensions = ['js', 'jsx', 'ts', 'tsx'];
 
-const external = ['react', 'react-dom', '@waline/client', 'classnames'];
+const external = ['react', '@waline/client', 'classnames', 'react/jsx-runtime'];
 
 export default {
     input: './src/index.tsx',
@@ -53,7 +54,7 @@ export default {
         postcss({
             plugins: [simplevars(), nested(), autoprefixer()],
             minimize: true,
-            // extract: 'style/index.css',
+            extract: 'style/index.css',
             // 处理.css和.less文件
             extensions: ['.less', '.css'],
             use: [
@@ -65,6 +66,7 @@ export default {
                 ],
             ],
         }),
+        gStyle(),
         image(),
         // swc 提供 jsx runtime
         swc({

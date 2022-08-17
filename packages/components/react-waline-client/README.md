@@ -8,9 +8,13 @@ A react client component developed for the waline commenting system.
 $ npm i @montagejs/react-waline-client --save
 ```
 
+> **`!!!important`** Considering the size of the package, starting from `1.0.0` version, users are required to control where and how the styles are imported, and the package no longer contains styles, but pure `js` code.
+
 ```tsx
 import Waline, { CRefProps } from '@montagejs/react-waline-client';
 import { FC, useRef } from 'react';
+
+import '@montagejs/react-waline-client/dist/style/index.css';
 
 const WalineDemo: FC = () => {
     const ref = useRef<CRefProps>(null);

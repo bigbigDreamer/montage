@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.1.0
+
+### Minor Changes
+
+- [`ca38cc9`](https://github.com/bigbigDreamer/montage/commit/ca38cc9) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - refactor: refactor bundle css way with ectra css file
+
 ## 0.0.9
 
 ### Patch Changes
