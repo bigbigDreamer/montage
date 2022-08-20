@@ -3,22 +3,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import swc from 'rollup-plugin-swc';
 import { minify } from 'rollup-plugin-esbuild';
 import cleaner from 'rollup-plugin-cleaner';
-// import babel from '@rollup/plugin-babel';
-import image from '@rollup/plugin-image';
-// 使rollup可以使用postCss处理样式文件less、css等
 import postcss from 'rollup-plugin-postcss';
-// 处理css定义的变量
 import simplevars from 'postcss-simple-vars';
-// 处理less嵌套样式写法
 import nested from 'postcss-nested';
-// autoPrefix
 import autoprefixer from 'autoprefixer';
 import progress from 'rollup-plugin-progress';
-import gStyle from '@montagejs/rollup-plugin-generate-style';
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const extensions = ['.ts', '.tsx'];
 
-const external = ['react', '@waline/client', 'classnames', 'react/jsx-runtime'];
+const external = ['react', 'react/jsx-runtime', 'lodash-es', '@montagejs/can-i-use'];
 
 export default {
     input: './src/index.tsx',
@@ -66,8 +59,6 @@ export default {
                 ],
             ],
         }),
-        gStyle(),
-        image(),
         // swc 提供 jsx runtime
         swc({
             exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
@@ -93,12 +84,6 @@ export default {
                 target: 'es2016',
             },
         }),
-        // babel import 实现按需加载
-        // babel({
-        //     extensions,
-        //     exclude: /node_modules/,
-        //     configFile: './babel.lazy.config.js',
-        // }),
         // esbuild 压缩代码
         minify(),
     ],

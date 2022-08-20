@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.7
+
+### Patch Changes
+
+- [`e8f797a`](https://github.com/bigbigDreamer/montage/commit/e8f797a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: add some package fileds
+
 ## 1.2.6
 
 ### Patch Changes

@@ -1,0 +1,34 @@
+{
+    "name": "@montagejs/can-i-use",
+    "version": "0.0.1",
+    "description": "can i use What are the characteristics in js or css or html？",
+    "main": "./lib/index.js",
+    "module": "./es/index.js",
+    "unpkg": "./dist/index.js",
+    "types": "./es/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c && tsc"
+    },
+    "author": "bigdreamer(不换)",
+    "license": "ISC",
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "can i use",
+        "css",
+        "javascript",
+        "typescript"
+    ],
+    "files": [
+        "es",
+        "lib",
+        "dist"
+    ],
+    "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/can-i-use",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/can-i-use"
+    }
+}

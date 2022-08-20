@@ -6,6 +6,7 @@
         "jsx": "react-jsx",
         "esModuleInterop": true,
         "types": ["vitest/globals"],
+        "lib": ["ESNext", "dom"],
         "strict": true,
         "skipLibCheck": true,
         "baseUrl": ".",

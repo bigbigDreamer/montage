@@ -1,0 +1,40 @@
+{
+    "name": "@montagejs/react-lazy-load-image",
+    "version": "0.0.1",
+    "description": "react lazy load image",
+    "main": "./lib/index.js",
+    "module": "./es/index.js",
+    "unpkg": "./dist/index.js",
+    "types": "./es/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c && tsc"
+    },
+    "author": "bigdreamer(不换)",
+    "license": "ISC",
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "react",
+        "image",
+        "lazy-load"
+    ],
+    "files": [
+        "es",
+        "lib",
+        "dist"
+    ],
+    "peerDependencies": {
+        "react": ">=16.8.0"
+    },
+    "dependencies": {
+        "@montagejs/can-i-use": "workspace:^0.0.1",
+        "lodash-es": "^4.17.21"
+    },
+    "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-lazy-load-image",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-lazy-load-image"
+    }
+}
