@@ -52,7 +52,7 @@ importers:
       yorkie: ^2.0.0
     dependencies:
       '@montagejs/changelog-montage': link:packages/plugins/changelog-montage
-      '@montagejs/rollup-plugin-generate-style': link:packages/plugins/rollup-plugin-generate-style
+      '@montagejs/rollup-plugin-generate-style': 0.0.3
       '@rollup/plugin-babel': 5.3.1_rollup@2.76.0
       '@rollup/plugin-commonjs': 22.0.1_rollup@2.76.0
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.76.0
@@ -101,7 +101,7 @@ importers:
 
   packages/components/react-lazy-load-image:
     specifiers:
-      '@montagejs/can-i-use': workspace:^0.0.1
+      '@montagejs/can-i-use': workspace:^0.0.2
       lodash-es: ^4.17.21
     dependencies:
       '@montagejs/can-i-use': link:../../tools/can-i-use
@@ -109,7 +109,7 @@ importers:
 
   packages/components/react-waline-client:
     specifiers:
-      '@montagejs/rollup-plugin-generate-style': workspace:0.0.3
+      '@montagejs/rollup-plugin-generate-style': workspace:0.0.4
       '@waline/client': ^2.6.1
       classnames: ^2.3.1
     dependencies:
@@ -136,6 +136,9 @@ importers:
       fs-extra: 10.1.0
     devDependencies:
       '@types/fs-extra': 9.0.13
+
+  packages/tools/can-i-use:
+    specifiers: {}
 
 packages:
 
@@ -7963,6 +7966,12 @@ packages:
 
   /@mdx-js/util/1.6.22:
     resolution: {integrity: sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==}
+    dev: false
+
+  /@montagejs/rollup-plugin-generate-style/0.0.3:
+    resolution: {integrity: sha512-9R+vpkD0s3zEKFW9I+OuFLk2IGYHYVtCeaf1Oj4lbiV+UyL21ADyXHu6hlebGRXIBaBy7ekGI8Cv/iS4Ra+lkg==}
+    dependencies:
+      fs-extra: 10.1.0
     dev: false
 
   /@mrmlnc/readdir-enhanced/2.2.1:
@@ -22602,6 +22611,8 @@ packages:
 
   /match-sorter/3.1.1:
     resolution: {integrity: sha512-Qlox3wRM/Q4Ww9rv1cBmYKNJwWVX/WC+eA3+1S3Fv4EOhrqyp812ZEfVFKQk0AP6RfzmPUUOwEZBbJ8IRt8SOw==}
+    dependencies:
+      remove-accents: 0.4.2
     dev: false
     bundledDependencies:
       - remove-accents
@@ -29162,6 +29173,10 @@ packages:
     engines: {node: '>= 0.8.0'}
     dependencies:
       parse-git-config: 1.1.1
+    dev: false
+
+  /remove-accents/0.4.2:
+    resolution: {integrity: sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==}
     dev: false
 
   /remove-bom-buffer/3.0.0:
