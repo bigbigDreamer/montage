@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/react-lazy-load-image",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "react lazy load image",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -29,7 +29,7 @@
         "react": ">=16.8.0"
     },
     "dependencies": {
-        "@montagejs/can-i-use": "workspace:^0.0.1",
+        "@montagejs/can-i-use": "workspace:^0.0.2",
         "lodash-es": "^4.17.21"
     },
     "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-lazy-load-image",
