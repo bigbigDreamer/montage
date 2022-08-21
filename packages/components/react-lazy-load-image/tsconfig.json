@@ -3,5 +3,6 @@
     "compilerOptions": {
         "outDir": "./es/",
         "emitDeclarationOnly": true
-    }
+    },
+    "include": ["./src/helpers.d.ts"]
 }

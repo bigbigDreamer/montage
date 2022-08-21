@@ -8,9 +8,10 @@ const ReactLazyLoadImageDemo: FC = () => {
 
     return (
         <ReactLazyLoadImageProvider
-            getPopupContainer={() => document.querySelector('.img-container')}
+            preload
+            getPopupContainer={() => document.querySelector('.img-container-preload')}
         >
-            <div className="img-container" ref={ref}>
+            <div className="img-container-preload" ref={ref}>
                 <ReactLazyLoadImage
                     src={
                         'https://to-out-use.oss-cn-hangzhou.aliyuncs.com/common/Kapture%202022-08-19%20at%2012.46.04.gif'

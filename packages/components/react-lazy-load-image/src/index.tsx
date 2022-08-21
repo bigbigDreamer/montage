@@ -1,63 +1,37 @@
 import type { FC, ImgHTMLAttributes } from 'react';
-import { useRef, useLayoutEffect } from 'react';
+import { useContext, useCallback } from 'react';
 
-import { ImagePreloadEngine, customDataSet, canLoading } from './helpers';
+import { customDataSet } from './helpers';
+import ReactLazyLoadImageProvider, { ReactLazyLoadImageContext } from './provider';
+import type { ReactLazyLoadImageContextProps } from './provider';
 
-type ReactLazyLoadImageProps = {
-    // need open preload image
-    preload?: boolean | { src: string };
-    // 禁用原生 loading，因为浏览器有时候表现形式不符合预期，并非是传统意义上的 懒加载
-    disabledLoading?: boolean;
+export type ReactLazyLoadImageProps = {
+    // 默认监听视口的容器
 } & ImgHTMLAttributes<HTMLImageElement>;
 
-type StaticPropsRefProps = {
-    src?: ReactLazyLoadImageProps['src'];
-    preload?: ReactLazyLoadImageProps['preload'];
-    disabledLoading?: ReactLazyLoadImageProps['disabledLoading'];
-};
-
 const customImgProps = (value: string) => ({
-    [`data-${customDataSet}`]: value,
+    [`data-${customDataSet.toLowerCase()}`]: value,
 });
 
 const ReactLazyLoadImage: FC<ReactLazyLoadImageProps> = ({
     src,
-    preload = false,
     alt,
     loading = 'lazy',
-    disabledLoading = false,
     ...props
 }) => {
-    const imgRef = useRef<HTMLImageElement>(null);
-    const staticPropsRef = useRef<StaticPropsRefProps>({
-        src,
-        preload,
-        disabledLoading,
-    });
+    const methodValue = useContext<ReactLazyLoadImageContextProps>(ReactLazyLoadImageContext);
 
-    staticPropsRef.current = {
-        src,
-        preload,
-        disabledLoading,
-    };
-
-    useLayoutEffect(() => {
-        if (canLoading && !staticPropsRef.current.disabledLoading) {
-            (imgRef.current as HTMLImageElement).src = staticPropsRef.current!.src as string;
+    const measureRef = useCallback((node) => {
+        if (node !== null) {
+            methodValue?.registerImageInstance?.(node);
         }
-
-        if (!staticPropsRef.current.preload) {
-            return;
-        }
-        const imgProxy = new ImagePreloadEngine({ target: imgRef.current as HTMLImageElement });
-        imgProxy.interceptAndSetUrl(staticPropsRef.current.src);
     }, []);
 
     return (
         <img
-            ref={imgRef}
+            ref={measureRef}
             alt={alt}
-            loading={disabledLoading ? undefined : loading}
+            loading={methodValue.disabledLoading ? undefined : loading}
             {...props}
             {...customImgProps(src as string)}
         />
@@ -65,3 +39,5 @@ const ReactLazyLoadImage: FC<ReactLazyLoadImageProps> = ({
 };
 
 export default ReactLazyLoadImage;
+
+export { ReactLazyLoadImageProvider };

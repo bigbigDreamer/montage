@@ -5,6 +5,7 @@ nav:
 group:
   path: /mit
   title: MIT
+order: 1
 ---
 
 # React-Waline-Client

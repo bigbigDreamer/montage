@@ -4,6 +4,7 @@ import swc from 'rollup-plugin-swc';
 import { minify } from 'rollup-plugin-esbuild';
 import cleaner from 'rollup-plugin-cleaner';
 import postcss from 'rollup-plugin-postcss';
+import image from '@rollup/plugin-image';
 import simplevars from 'postcss-simple-vars';
 import nested from 'postcss-nested';
 import autoprefixer from 'autoprefixer';
@@ -44,6 +45,7 @@ export default {
         cleaner({
             targets: ['./es/', './lib/', '.dist'],
         }),
+        image(),
         postcss({
             plugins: [simplevars(), nested(), autoprefixer()],
             minimize: true,
