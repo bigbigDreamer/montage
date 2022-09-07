@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.10
+
+### Patch Changes
+
+- [`065552f`](https://github.com/bigbigDreamer/montage/commit/065552f) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - test: add glob exclude file to package.json file
+
 ## 1.2.9
 
 ### Patch Changes

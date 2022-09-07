@@ -1,5 +1,14 @@
 # @montagejs/react-waline-client
 
+## 0.1.4
+
+### Patch Changes
+
+- [`065552f`](https://github.com/bigbigDreamer/montage/commit/065552f) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - test: add glob exclude file to package.json file
+
+- Updated dependencies
+  - @montagejs/rollup-plugin-generate-style@0.0.7
+
 ## 0.1.3
 
 ### Patch Changes

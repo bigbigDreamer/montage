@@ -1,5 +1,11 @@
 # @montagejs/react-lazy-load-image
 
+## 0.0.9
+
+### Patch Changes
+
+- [`065552f`](https://github.com/bigbigDreamer/montage/commit/065552f) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - test: add glob exclude file to package.json file
+
 ## 0.0.8
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/react-waline-client",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "react waline client",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -23,14 +23,15 @@
         "react": ">=16.8.0"
     },
     "dependencies": {
-        "@montagejs/rollup-plugin-generate-style": "workspace:0.0.6",
+        "@montagejs/rollup-plugin-generate-style": "workspace:0.0.7",
         "@waline/client": "^2.6.1",
         "classnames": "^2.3.1"
     },
     "files": [
         "es",
         "lib",
-        "dist"
+        "dist",
+        "!es/tsconfig.tsbuildinfo"
     ],
     "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-waline-client",
     "repository": {

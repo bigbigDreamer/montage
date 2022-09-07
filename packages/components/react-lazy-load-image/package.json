@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/react-lazy-load-image",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "react lazy load image",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -23,7 +23,8 @@
     "files": [
         "es",
         "lib",
-        "dist"
+        "dist",
+        "!es/tsconfig.tsbuildinfo"
     ],
     "peerDependencies": {
         "react": ">=16.8.0"
