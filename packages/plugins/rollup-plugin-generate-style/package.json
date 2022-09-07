@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/rollup-plugin-generate-style",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "rollup plugin for generate style with babel-plugin-import",
     "main": "./lib/index.js",
     "module": "./es/index.js",

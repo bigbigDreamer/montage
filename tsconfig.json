@@ -27,5 +27,12 @@
         "jest.config.js",
         "babel.config.js",
         "vite.config.ts"
+    ],
+    "references": [
+        { "path": "./packages/components/react-lazy-load-image" },
+        { "path": "./packages/components/react-waline-client" },
+        { "path": "packages/plugins/rollup-plugin-generate-style" },
+        { "path": "packages/plugins/changelog-montage" },
+        { "path": "packages/tools/can-i-use" },
     ]
 }

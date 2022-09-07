@@ -1,5 +1,11 @@
 # @montagejs/rollup-plugin-generate-style
 
+## 0.0.5
+
+### Patch Changes
+
+- [`0e0ad6f`](https://github.com/bigbigDreamer/montage/commit/0e0ad6f) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - perf: add build refrence project
+
 ## 0.0.4
 
 ### Patch Changes

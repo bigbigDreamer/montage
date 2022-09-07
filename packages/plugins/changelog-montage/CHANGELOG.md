@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.8
+
+### Patch Changes
+
+- [`0e0ad6f`](https://github.com/bigbigDreamer/montage/commit/0e0ad6f) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - perf: add build refrence project
+
 ## 1.2.7
 
 ### Patch Changes
