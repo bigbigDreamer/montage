@@ -1,5 +1,11 @@
 # @montagejs/can-i-use
 
+## 0.0.4
+
+### Patch Changes
+
+- [`a53949a`](https://github.com/bigbigDreamer/montage/commit/a53949a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - perf: perf ts build
+
 ## 0.0.3
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @montagejs/react-waline-client
 
+## 0.1.3
+
+### Patch Changes
+
+- [`a53949a`](https://github.com/bigbigDreamer/montage/commit/a53949a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - perf: perf ts build
+
+- Updated dependencies
+  - @montagejs/rollup-plugin-generate-style@0.0.6
+
 ## 0.1.2
 
 ### Patch Changes

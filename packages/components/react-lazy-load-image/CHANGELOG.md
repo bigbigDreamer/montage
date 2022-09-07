@@ -1,5 +1,14 @@
 # @montagejs/react-lazy-load-image
 
+## 0.0.7
+
+### Patch Changes
+
+- [`a53949a`](https://github.com/bigbigDreamer/montage/commit/a53949a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - perf: perf ts build
+
+- Updated dependencies
+  - @montagejs/can-i-use@0.0.4
+
 ## 0.0.6
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @montagejs/rollup-plugin-generate-style
 
+## 0.0.6
+
+### Patch Changes
+
+- [`a53949a`](https://github.com/bigbigDreamer/montage/commit/a53949a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - perf: perf ts build
+
 ## 0.0.5
 
 ### Patch Changes

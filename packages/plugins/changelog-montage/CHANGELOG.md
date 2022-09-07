@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.9
+
+### Patch Changes
+
+- [`a53949a`](https://github.com/bigbigDreamer/montage/commit/a53949a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - perf: perf ts build
+
 ## 1.2.8
 
 ### Patch Changes

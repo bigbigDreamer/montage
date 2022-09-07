@@ -3,3 +3,4 @@ lib
 package-lock.json
 node_modules
 dist
+tsconfig.tsbuildinfo
