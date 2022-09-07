@@ -1,5 +1,12 @@
 # @montagejs/react-lazy-load-image
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies
+  - @montagejs/can-i-use@0.0.5
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @montagejs/can-i-use
 
+## 0.0.5
+
+### Patch Changes
+
+- [`cd173e7`](https://github.com/bigbigDreamer/montage/commit/cd173e7) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - test: test files glob pattern
+
 ## 0.0.4
 
 ### Patch Changes
