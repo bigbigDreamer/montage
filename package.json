@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@montagejs/changelog-montage": "workspace:^1.2.3",
-    "@montagejs/rollup-plugin-generate-style": "0.0.3",
+    "@montagejs/rollup-plugin-generate-style": "0.0.8",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
