@@ -1,5 +1,11 @@
 # @montagejs/react-lazy-load-image
 
+## 0.0.11
+
+### Patch Changes
+
+- [`2f44b38`](https://github.com/bigbigDreamer/montage/commit/2f44b38) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix pkg from source
+
 ## 0.0.10
 
 ### Patch Changes

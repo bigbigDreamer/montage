@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.1.6
+
+### Patch Changes
+
+- [`2f44b38`](https://github.com/bigbigDreamer/montage/commit/2f44b38) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix pkg from source
+
 ## 0.1.5
 
 ### Patch Changes
