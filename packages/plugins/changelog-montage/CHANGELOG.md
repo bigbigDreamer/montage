@@ -1,5 +1,11 @@
 # @montagejs/changelog-montage
 
+## 1.2.11
+
+### Patch Changes
+
+- [`416b53d`](https://github.com/bigbigDreamer/montage/commit/416b53d) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix d.ts can't generate againe
+
 ## 1.2.10
 
 ### Patch Changes

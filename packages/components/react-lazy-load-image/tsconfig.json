@@ -1,8 +1,9 @@
 {
     "extends": "../../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "./es/",
+        "declarationDir": "./es/",
         "emitDeclarationOnly": true
     },
-    "include": ["./src/helpers.d.ts"]
+    "include": ["./src"],
+    "files": ["./src/helpers.d.ts"]
 }

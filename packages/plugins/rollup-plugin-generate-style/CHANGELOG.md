@@ -1,5 +1,11 @@
 # @montagejs/rollup-plugin-generate-style
 
+## 0.0.8
+
+### Patch Changes
+
+- [`416b53d`](https://github.com/bigbigDreamer/montage/commit/416b53d) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix d.ts can't generate againe
+
 ## 0.0.7
 
 ### Patch Changes

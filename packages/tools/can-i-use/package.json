@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/can-i-use",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "can i use What are the characteristics in js or css or html？",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -24,8 +24,7 @@
     "files": [
         "es",
         "lib",
-        "dist",
-        "!es/tsconfig.tsbuildinfo"
+        "dist"
     ],
     "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/can-i-use",
     "repository": {

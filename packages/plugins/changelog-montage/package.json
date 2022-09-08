@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/changelog-montage",
-    "version": "1.2.10",
+    "version": "1.2.11",
     "description": "changeset log plugin",
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -17,8 +17,7 @@
     },
     "files": [
         "es",
-        "lib",
-        "!es/tsconfig.tsbuildinfo"
+        "lib"
     ],
     "devDependencies": {
         "@changesets/types": "^5.1.0"

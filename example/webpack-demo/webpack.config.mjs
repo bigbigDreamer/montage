@@ -1,6 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CheckCssLoader from "./loader/check-css-loader.js";
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -41,7 +42,9 @@ export default {
                 // include: [
                 //     resolve("./src")
                 // ],
-                use: ["style-loader", "css-loader"],
+                use: ["style-loader", "css-loader", {
+                    loader: resolve('./loader/check-css-loader.js')
+                }],
             }
         ],
     },

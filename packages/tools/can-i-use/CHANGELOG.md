@@ -1,5 +1,11 @@
 # @montagejs/can-i-use
 
+## 0.0.6
+
+### Patch Changes
+
+- [`416b53d`](https://github.com/bigbigDreamer/montage/commit/416b53d) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix d.ts can't generate againe
+
 ## 0.0.5
 
 ### Patch Changes

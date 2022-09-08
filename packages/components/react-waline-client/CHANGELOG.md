@@ -1,5 +1,14 @@
 # @montagejs/react-waline-client
 
+## 0.1.5
+
+### Patch Changes
+
+- [`416b53d`](https://github.com/bigbigDreamer/montage/commit/416b53d) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix d.ts can't generate againe
+
+- Updated dependencies
+  - @montagejs/rollup-plugin-generate-style@0.0.8
+
 ## 0.1.4
 
 ### Patch Changes

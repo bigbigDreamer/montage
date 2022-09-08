@@ -1,7 +1,7 @@
 {
     "extends": "../../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "./es/",
-        "emitDeclarationOnly": true
+        "declarationDir": "./es/",
+        "emitDeclarationOnly": true,
     }
 }
