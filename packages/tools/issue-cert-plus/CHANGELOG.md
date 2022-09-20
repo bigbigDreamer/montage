@@ -1,5 +1,11 @@
 # @montagejs/issue-cert-plus
 
+## 0.0.3
+
+### Patch Changes
+
+- [`c05c503`](https://github.com/bigbigDreamer/montage/commit/c05c503) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix bundle size is too large, external lodash source code
+
 ## 0.0.2
 
 ### Patch Changes

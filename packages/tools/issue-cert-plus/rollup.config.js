@@ -15,7 +15,9 @@ const external = [
     'consola',
     'fs-extra',
     'jsonfile',
-    'lodash',
+    'lodash/difference',
+    'lodash/uniq',
+    'lodash/omit',
     'shelljs',
     'os',
 ];
