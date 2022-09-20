@@ -1,7 +1,7 @@
 {
-    "name": "@montagejs/can-i-use",
-    "version": "0.0.7",
-    "description": "can i use What are the characteristics in js or css or html？",
+    "name": "@montagejs/issue-cert",
+    "version": "0.0.2",
+    "description": "issue cert",
     "main": "./lib/index.js",
     "module": "./es/index.js",
     "unpkg": "./dist/index.js",
@@ -16,19 +16,20 @@
         "access": "public"
     },
     "keywords": [
-        "can i use",
-        "css",
-        "javascript",
-        "typescript"
+        "mkcert",
+        "npm"
     ],
     "files": [
         "es",
         "lib",
         "dist"
     ],
-    "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/can-i-use",
+    "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/issue-cert",
     "repository": {
         "type": "git",
-        "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/can-i-use"
+        "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/issue-cert"
+    },
+    "dependencies": {
+        "mkcert": "^1.5.1"
     }
 }

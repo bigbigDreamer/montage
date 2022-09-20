@@ -1,0 +1,9 @@
+{
+    "extends": "../../../tsconfig.json",
+    "files": ["./src/types/index.d.ts"],
+    "include": ["./src"],
+    "compilerOptions": {
+        "declarationDir": "./es/",
+        "emitDeclarationOnly": true
+    }
+}

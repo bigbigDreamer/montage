@@ -1,0 +1,47 @@
+{
+    "name": "@montagejs/issue-cert-plus",
+    "version": "0.0.2",
+    "description": "issue cert",
+    "main": "./lib/index.js",
+    "module": "./es/index.js",
+    "unpkg": "./dist/index.js",
+    "types": "./lib/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c && tsc"
+    },
+    "author": "bigdreamer(不换)",
+    "license": "ISC",
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "mkcert",
+        "webpack",
+        "https"
+    ],
+    "files": [
+        "es",
+        "lib",
+        "dist"
+    ],
+    "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/issue-cert-plus",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/issue-cert-plus"
+    },
+    "dependencies": {
+        "consola": "^2.15.3",
+        "fs-extra": "^10.1.0",
+        "jsonfile": "^6.1.0",
+        "lodash": "^4.17.21",
+        "shelljs": "^0.8.5"
+    },
+    "devDependencies": {
+        "@types/consola": "^2.2.5",
+        "@types/fs-extra": "^9.0.13",
+        "@types/jsonfile": "^6.1.0",
+        "@types/lodash": "^4.14.185",
+        "@types/shelljs": "^0.8.11"
+    }
+}

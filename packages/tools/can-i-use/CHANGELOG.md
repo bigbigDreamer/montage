@@ -1,5 +1,11 @@
 # @montagejs/can-i-use
 
+## 0.0.7
+
+### Patch Changes
+
+- [`237cb76`](https://github.com/bigbigDreamer/montage/commit/237cb76) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix pkg git url
+
 ## 0.0.6
 
 ### Patch Changes
