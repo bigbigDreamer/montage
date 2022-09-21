@@ -1,4 +1,4 @@
-import { ExecOutputReturnValue } from 'shelljs';
+import { type ExecOutputReturnValue } from 'shelljs';
 import Logger from './logger';
 /**
  * @licence code from https://github.com/coderaiser/try-catch/blob/master/lib/try-catch.js

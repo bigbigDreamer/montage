@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/issue-cert-plus",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "issue cert",
     "main": "./lib/index.js",
     "module": "./es/index.js",

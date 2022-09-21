@@ -1,5 +1,11 @@
 # @montagejs/issue-cert-plus
 
+## 0.0.4
+
+### Patch Changes
+
+- [`7517585`](https://github.com/bigbigDreamer/montage/commit/7517585) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: override type import way
+
 ## 0.0.3
 
 ### Patch Changes

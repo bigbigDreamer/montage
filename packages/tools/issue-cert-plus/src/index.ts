@@ -43,6 +43,9 @@ class IssueCertPlus {
         tryCatchShellError(exec('mkcert --install'));
     }
 
+    /**
+     * @desc mkcert https cert
+     */
     mkcert() {
         this.canIUseAndTip();
         this.#fs.mkHomeDir();
