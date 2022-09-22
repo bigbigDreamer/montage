@@ -1,4 +1,5 @@
 import ReactWalineClientDemo from './demo'
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 # React-Waline-Client
 
@@ -16,7 +17,11 @@ $ npm i @montagejs/react-waline-client --save
 
 ## 代码演示
 
-<ReactWalineClientDemo/>
+<BrowserOnly>
+    {
+        () => <ReactWalineClientDemo/>
+    }
+</BrowserOnly>
 
 ## API
 

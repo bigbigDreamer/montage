@@ -8,9 +8,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: 'Montage',
     tagline: 'Montage is cool，用蒙太奇的艺术手法，创造值得令人揣摩的事物～',
-    url: 'https://your-docusaurus-test-site.com',
+    url: 'https://montage.bigdreamer.cc',
     baseUrl: '/',
-    onBrokenLinks: 'throw',
+    onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'https://cdn.jsdelivr.net/gh/bigbigDreamer/pic-bed@main/uPic/SYcWVv.jpg',
 
