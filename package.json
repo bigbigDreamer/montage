@@ -59,7 +59,7 @@
     "antd": "^4.21.5",
     "autoprefixer": "^10.4.7",
     "babel-plugin-import": "^1.13.5",
-    "esbuild": "^0.14.48",
+    "esbuild": "0.15.9",
     "fs-extra": "^10.1.0",
     "gh-pages": "4.0.0",
     "less": "^4.1.3",
