@@ -3,16 +3,18 @@ import commonjs from '@rollup/plugin-commonjs';
 import swc from 'rollup-plugin-swc';
 import { minify } from 'rollup-plugin-esbuild';
 import cleaner from 'rollup-plugin-cleaner';
+// import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
-import image from '@rollup/plugin-image';
+// 处理css定义的变量
 import simplevars from 'postcss-simple-vars';
+// 处理less嵌套样式写法
 import nested from 'postcss-nested';
+// autoPrefix
 import autoprefixer from 'autoprefixer';
-import progress from 'rollup-plugin-progress';
 
-const extensions = ['.ts', '.tsx'];
+const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const external = ['react', 'react/jsx-runtime', 'lodash-es', '@montagejs/can-i-use'];
+const external = ['react', '@waline/client', 'classnames', 'react/jsx-runtime'];
 
 export default {
     input: './src/index.ts',
@@ -37,15 +39,13 @@ export default {
     ],
     external,
     plugins: [
-        progress({ clearLine: false }),
         // 帮助 rollup 查找 node_modules 里的三方模块
         resolve({ extensions }),
         // 帮助 rollup 查找 commonjs 规范的模块, 常配合 rollup-plugin-node-resolve 一起使用
         commonjs(),
         cleaner({
-            targets: ['./es/', './lib/', '.dist'],
+            targets: ['./es/', './lib/'],
         }),
-        image(),
         postcss({
             plugins: [simplevars(), nested(), autoprefixer()],
             minimize: true,
@@ -65,10 +65,10 @@ export default {
         swc({
             exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
             // 暂时关闭 corJs
-            // env: {
-            //     coreJs: '3.21.1',
-            //     mode: 'usage',
-            // },
+            env: {
+                coreJs: '3.21.1',
+                mode: 'usage',
+            },
             jsc: {
                 loose: true,
                 externalHelpers: true,
@@ -83,7 +83,7 @@ export default {
                         development: false,
                     },
                 },
-                target: 'es2016',
+                target: 'es2015',
             },
         }),
         // esbuild 压缩代码

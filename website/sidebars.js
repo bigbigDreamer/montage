@@ -32,19 +32,23 @@ const sidebars = {
             ],
         },
     ],
-
-    // But you can create a sidebar manually
-    /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-   */
+    plugins: [
+        {
+            type: 'category',
+            label: 'Getting Started',
+            collapsed: false,
+            items: ['intro/plugins'],
+        },
+        {
+            type: 'category',
+            label: 'Plugins',
+            collapsed: false,
+            items: [
+                'plugins/changelog-montage/index',
+                'plugins/rollup-plugin-generate-style/index',
+            ],
+        },
+    ],
 };
 
 module.exports = sidebars;

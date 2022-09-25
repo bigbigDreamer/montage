@@ -5,7 +5,7 @@
     "scripts": {
         "docusaurus": "docusaurus",
         "start": "docusaurus start",
-        "build:docs": "docusaurus build",
+        "build": "docusaurus build",
         "swizzle": "docusaurus swizzle",
         "deploy": "docusaurus deploy",
         "clear": "docusaurus clear",
@@ -51,5 +51,14 @@
     },
     "engines": {
         "node": ">=16.14"
+    },
+    "nx": {
+        "build": {
+            "dependsOn": [
+                {
+                    "projects": "self"
+                }
+            ]
+        }
     }
 }

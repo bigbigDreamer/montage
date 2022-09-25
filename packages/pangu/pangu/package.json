@@ -1,0 +1,38 @@
+{
+    "name": "@montagejs/pangu",
+    "version": "0.0.1",
+    "description": "react pangu for react router",
+    "main": "./lib/index.js",
+    "module": "./es/index.js",
+    "unpkg": "./dist/index.js",
+    "types": "./es/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c && tsc"
+    },
+    "author": "bigdreamer(不换)",
+    "license": "ISC",
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "react",
+        "react-router-dom"
+    ],
+    "peerDependencies": {
+        "react": ">=16.8.0",
+        "react-dom": ">=16.8.0"
+    },
+    "dependencies": {
+        "react-router-dom": "^6.4.1"
+    },
+    "files": [
+        "es",
+        "lib"
+    ],
+    "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-waline-client",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-waline-client"
+    }
+}

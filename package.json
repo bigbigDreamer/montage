@@ -8,7 +8,7 @@
     "build:pnpm": "pnpm --filter packages/** run build",
     "build": "nx run-many --target=build --all",
     "analyze": "nx graph",
-    "docs:build": "nx run-many --target=build --projects=website",
+    "docs:build": "pnpm --filter website build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",

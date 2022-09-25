@@ -25,6 +25,7 @@ function HomepageHeader() {
     );
 }
 
+console.log('ssss');
 export default function Home(): JSX.Element {
     const { siteConfig } = useDocusaurusContext();
     return (
