@@ -21,7 +21,7 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 const external = ['react', '@waline/client', 'classnames', 'react/jsx-runtime'];
 
 export default {
-    input: './src/index.ts',
+    input: './src/index.tsx',
     output: [
         {
             file: './lib/index.js',

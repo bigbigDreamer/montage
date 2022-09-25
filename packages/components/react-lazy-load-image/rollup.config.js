@@ -15,7 +15,7 @@ const extensions = ['.ts', '.tsx'];
 const external = ['react', 'react/jsx-runtime', 'lodash-es', '@montagejs/can-i-use'];
 
 export default {
-    input: './src/index.ts',
+    input: './src/index.tsx',
     output: [
         {
             file: './lib/index.js',
