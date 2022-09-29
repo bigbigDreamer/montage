@@ -3,4 +3,6 @@ packages:
   - 'packages/components/*'
   - 'packages/plugins/*'
   - 'packages/tools/*'
+  - 'packages/pangu/*'
   - 'website'
+  - 'example'
