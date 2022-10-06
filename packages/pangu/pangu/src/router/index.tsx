@@ -1,9 +1,19 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, type RouteObject } from 'react-router-dom';
 import Plugins from '../plugin';
-import { ReactElement } from 'react';
+import type { ComponentType, FC, ReactElement } from 'react';
+import { Title } from '../helper';
+
+type PanGuRouteObject = {
+    lazy?: boolean;
+    redirect?: string;
+    component?: ComponentType | (() => JSX.Element);
+    title?: string;
+    path: string;
+    children?: PanGuRouteObject[];
+} & RouteObject;
 
 type RouterProps = {
-    routes: any[];
+    routes: PanGuRouteObject[];
 };
 
 class Router {
@@ -16,7 +26,7 @@ class Router {
     /**
      * @desc 增强 route 的能力
      */
-    enhanceRoute(routes: any[]) {
+    enhanceRoute(routes: undefined | (PanGuRouteObject[] & RouteObject[])) {
         if (!routes) {
             return [];
         }
@@ -39,12 +49,20 @@ class Router {
             /**
              * @desc Map component to render wrapper
              */
-            const Children = component;
+            const AliasC = component as FC<unknown>;
+
+            const WrapperComponent = title ? (
+                <Title title={title}>
+                    <AliasC />
+                </Title>
+                ) : (
+                <AliasC />
+            ) ;
 
             /**
              * @desc wrapper component with inner plugin
              */
-            let wrapComponent = Plugins.compose({ type: 'inner', children: <Children/>, route });
+            let wrapComponent = Plugins.compose({ type: 'inner', children: WrapperComponent, route });
 
             if (children && children.length === 0) {
                 return <Route element={wrapComponent} path={path} key={path} />;

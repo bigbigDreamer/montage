@@ -3,7 +3,7 @@
  *   1. 注册插件
  *   2. 区分插件类别，inner 还是 outer
  */
-import { ReactElement, ReactNode } from 'react';
+import {ComponentType, ReactElement, ReactNode} from 'react';
 
 export type RoutePlugin = {
     name?: string;
@@ -32,22 +32,26 @@ class PluginsEngine {
         return this.plugins;
     }
 
-    compose(props: { children: ReactNode | ReactElement; type: PluginType }): ReactElement;
+    compose(props: { children:  ReactElement; type: PluginType }): ReactElement;
     compose(props: {
-        children: ReactNode | ReactElement;
+        children: ReactElement;
         type: PluginType;
         route: any;
     }): ReactElement;
     compose(props: {
-        children: ReactNode | ReactElement;
+        children: ReactElement ;
         type: PluginType;
         route?: any;
     }): ReactElement {
         const { type, children, route } = props;
+        console.log(props, "props")
         let finalChildren = children;
         this.plugins.forEach((routePlugin) => {
             const { instance, options } = routePlugin;
             const wrapperFn = instance[type];
+            // 必须判断插件的主题函数是不是函数，避免非  function 场景阻塞整体路由渲染
+            // todo: logger，非函数需 logger 出去
+            if(typeof wrapperFn!== 'function') { return; }
             if (type === PluginTypes.INNER) {
                 finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
             } else if (type === PluginTypes.OUTER) {

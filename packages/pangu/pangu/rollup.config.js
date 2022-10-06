@@ -14,7 +14,7 @@ import autoprefixer from 'autoprefixer';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const external = ['react', 'react-dom', 'react-router-dom', 'react/jsx-runtime'];
+const external = ['react', 'react-dom', 'react-router-dom', 'react/jsx-runtime', '@types/*'];
 
 export default {
     input: './src/index.ts',
