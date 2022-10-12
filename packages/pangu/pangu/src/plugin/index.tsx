@@ -3,7 +3,7 @@
  *   1. 注册插件
  *   2. 区分插件类别，inner 还是 outer
  */
-import {ComponentType, ReactElement, ReactNode} from 'react';
+import {ReactElement, ReactNode} from 'react';
 
 export type RoutePlugin = {
     name?: string;
