@@ -1,15 +1,19 @@
 import { BrowserRouter, Navigate, Route, Routes, type RouteObject } from 'react-router-dom';
 import Plugins from '../plugin';
 import type { ComponentType, FC, ReactElement } from 'react';
-import { Title } from '../helper';
+import Loadable, { type LoadingComponentProps } from 'react-loadable';
+import { Title, Loading } from '../helper';
 
-type PanGuRouteObject = {
+export type DynamicImportComponentType = () => Promise<ComponentType | { default: ComponentType }>
+
+export type PanGuRouteObject = {
     lazy?: boolean;
     redirect?: string;
-    component?: ComponentType | (() => JSX.Element);
+    component?: ComponentType | DynamicImportComponentType;
     title?: string;
     path: string;
     children?: PanGuRouteObject[];
+    loading?: ComponentType<LoadingComponentProps>;
 } & RouteObject;
 
 type RouterProps = {
@@ -32,7 +36,7 @@ class Router {
         }
 
         return routes.map((route, index) => {
-            const { title, component, redirect, path, children } = route;
+            const { title, component, redirect, path, children, lazy, loading } = route;
 
             if (redirect) {
                 return <Route key={path} path={path} element={<Navigate to={path} />} />;
@@ -49,7 +53,10 @@ class Router {
             /**
              * @desc Map component to render wrapper
              */
-            const AliasC = component as FC<unknown>;
+            const AliasC = lazy ? Loadable({
+                loader: component as DynamicImportComponentType,
+                loading: loading || Loading
+            }) as FC<unknown> : component as FC<unknown>;
 
             const WrapperComponent = title ? (
                 <Title title={title}>
