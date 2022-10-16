@@ -6,6 +6,7 @@ import Router from "../router";
 type PanGuConstructorStruts = {
     container?: HTMLElement;
     routes: any[];
+    mode?: 'hash'|'history';
 };
 
 class PanGu {
@@ -13,12 +14,14 @@ class PanGu {
 
     static defaultProps = {
         container: document.getElementById('root') as HTMLElement,
+        mode: 'history'
     };
     #routerInstance: Router;
+    private mode: "hash" | "history" | undefined;
 
     constructor(p: PanGuConstructorStruts = { routes: [] }) {
         Object.assign(this, PanGu.defaultProps, p);
-        this.#routerInstance = new Router({ routes: p.routes });
+        this.#routerInstance = new Router({ routes: p.routes, mode: this.mode as "hash" | "history" });
     }
 
     start() {

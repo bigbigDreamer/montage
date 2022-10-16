@@ -3,14 +3,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import swc from 'rollup-plugin-swc';
 import { minify } from 'rollup-plugin-esbuild';
 import cleaner from 'rollup-plugin-cleaner';
-// import babel from '@rollup/plugin-babel';
-import postcss from 'rollup-plugin-postcss';
-// 处理css定义的变量
-import simplevars from 'postcss-simple-vars';
-// 处理less嵌套样式写法
-import nested from 'postcss-nested';
-// autoPrefix
-import autoprefixer from 'autoprefixer';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -46,29 +38,14 @@ export default {
         cleaner({
             targets: ['./es/', './lib/'],
         }),
-        postcss({
-            plugins: [simplevars(), nested(), autoprefixer()],
-            minimize: true,
-            extract: 'style/index.css',
-            // 处理.css和.less文件
-            extensions: ['.less', '.css'],
-            use: [
-                [
-                    'less',
-                    {
-                        javascriptEnabled: true,
-                    },
-                ],
-            ],
-        }),
         // swc 提供 jsx runtime
         swc({
             exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
             // 暂时关闭 corJs
-            env: {
-                coreJs: '3.21.1',
-                mode: 'usage',
-            },
+            // env: {
+            //     coreJs: '3.21.1',
+            //     mode: 'usage',
+            // },
             jsc: {
                 loose: true,
                 externalHelpers: true,

@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes, type RouteObject } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Navigate, Route, Routes, type RouteObject } from 'react-router-dom';
 import Plugins from '../plugin';
 import type { ComponentType, FC, ReactElement } from 'react';
 import Loadable, { type LoadingComponentProps } from 'react-loadable';
@@ -18,13 +18,16 @@ export type PanGuRouteObject = {
 
 type RouterProps = {
     routes: PanGuRouteObject[];
+    mode: 'hash'|'history';
 };
 
 class Router {
     readonly #routes: any[];
+    readonly #mode: "hash" | "history";
 
-    constructor(p: RouterProps = { routes: [] }) {
+    constructor(p: RouterProps) {
         this.#routes = p.routes;
+        this.#mode = p.mode;
     }
 
     /**
@@ -89,14 +92,16 @@ class Router {
 
     private createBrowserRouter() {
 
+        const AppRouter = this.#mode === 'hash' ? HashRouter : BrowserRouter;
+
         const Inner = () => (
-            <BrowserRouter>
+            <AppRouter>
                 <Routes>
                     {
                         this.createRoutesFromConfig()
                     }
                 </Routes>
-            </BrowserRouter>
+            </AppRouter>
         )
 
         return <Inner/>
