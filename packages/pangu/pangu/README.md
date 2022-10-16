@@ -36,3 +36,7 @@ const app = new PanGu({
 app.start();
 ```
 
+## Inspiration Warehouse
+
+- [react-launcher](https://github.com/myNameIsDu/react-launcher)
+
