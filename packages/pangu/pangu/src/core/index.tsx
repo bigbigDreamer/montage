@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 import { type DOMElement } from "react";
 import Plugins, { type RoutePlugin } from "../plugin";
-import Router from "../router";
+import Router, { type PanGuRouteObject } from "../router";
 
 type PanGuConstructorStruts = {
     container?: HTMLElement;
-    routes: any[];
+    routes: PanGuRouteObject[];
     mode?: 'hash'|'history';
 };
 

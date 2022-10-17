@@ -98,7 +98,7 @@ importers:
       '@aktiv/launcher': ^1.5.0
       '@commitlint/cli': ^12.1.4
       '@commitlint/config-conventional': ^12.1.4
-      '@montagejs/pangu': workspace:^0.0.1
+      '@montagejs/pangu': workspace:^0.0.2
       '@types/react': ^17.0.47
       '@types/react-dom': ^17.0.17
       '@typescript-eslint/eslint-plugin': ^5.6.0

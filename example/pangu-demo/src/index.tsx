@@ -14,6 +14,9 @@ const innerPlugin = {
             </div>
         );
     },
+    forRoutes() {
+        return ['/about'];
+    },
 };
 
 const app = new PanGu({

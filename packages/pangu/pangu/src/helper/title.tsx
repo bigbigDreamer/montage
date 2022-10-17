@@ -1,4 +1,4 @@
-import {FC, useEffect} from "react";
+import { type FC, useEffect } from "react";
 
 type TitleProps = {
     title?: string;

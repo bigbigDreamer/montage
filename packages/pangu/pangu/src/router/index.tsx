@@ -22,7 +22,7 @@ type RouterProps = {
 };
 
 class Router {
-    readonly #routes: any[];
+    readonly #routes: PanGuRouteObject[];
     readonly #mode: "hash" | "history";
 
     constructor(p: RouterProps) {
@@ -38,7 +38,7 @@ class Router {
             return [];
         }
 
-        return routes.map((route, index) => {
+        return routes.map(route => {
             const { title, component, redirect, path, children, lazy, loading } = route;
 
             if (redirect) {

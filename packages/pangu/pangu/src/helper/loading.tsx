@@ -1,11 +1,7 @@
-import {FC} from "react";
+import type { FC } from 'react';
 
 const Loading: FC = () => {
-    return (
-        <div className="pangu-route-loading">
-            loading...
-        </div>
-    )
+    return <div className="pangu-route-loading">loading...</div>;
 };
 
 export default Loading;

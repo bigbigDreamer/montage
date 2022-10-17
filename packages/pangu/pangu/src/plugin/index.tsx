@@ -3,12 +3,14 @@
  *   1. 注册插件
  *   2. 区分插件类别，inner 还是 outer
  */
-import {ReactElement, ReactNode} from 'react';
+import type { ReactElement, ReactNode } from 'react';
+import type { PanGuRouteObject } from '../router';
 
 export type RoutePlugin = {
-    name?: string;
-    inner?(children: ReactNode, options?: unknown, route?: any): ReactElement;
+    key?: string | number | unknown;
+    inner?(children: ReactNode, options?: unknown, route?: PanGuRouteObject): ReactElement;
     outer?(children: ReactNode, options?: unknown): ReactElement;
+    forRoutes?(): string | string[];
 };
 
 export type PluginType = 'inner' | 'outer';
@@ -32,28 +34,28 @@ class PluginsEngine {
         return this.plugins;
     }
 
-    compose(props: { children:  ReactElement; type: PluginType }): ReactElement;
-    compose(props: {
-        children: ReactElement;
-        type: PluginType;
-        route: any;
-    }): ReactElement;
-    compose(props: {
-        children: ReactElement ;
-        type: PluginType;
-        route?: any;
-    }): ReactElement {
+    compose(props: { children: ReactElement; type: PluginType }): ReactElement;
+    compose(props: { children: ReactElement; type: PluginType; route: any }): ReactElement;
+    compose(props: { children: ReactElement; type: PluginType; route?: any }): ReactElement {
         const { type, children, route } = props;
-        console.log(props, "props")
         let finalChildren = children;
-        this.plugins.forEach((routePlugin) => {
+        this.plugins.forEach(routePlugin => {
             const { instance, options } = routePlugin;
             const wrapperFn = instance[type];
+            const forRoutes = instance?.forRoutes?.();
             // 必须判断插件的主题函数是不是函数，避免非  function 场景阻塞整体路由渲染
             // todo: logger，非函数需 logger 出去
-            if(typeof wrapperFn!== 'function') { return; }
+            if (typeof wrapperFn !== 'function') {
+                return;
+            }
             if (type === PluginTypes.INNER) {
-                finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
+                if (!forRoutes) {
+                    finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
+                } else if (typeof forRoutes === 'string' && forRoutes === route?.path) {
+                    finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
+                } else if (Array.isArray(forRoutes) && forRoutes.includes(route?.path)) {
+                    finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
+                }
             } else if (type === PluginTypes.OUTER) {
                 finalChildren = wrapperFn?.(finalChildren, options) as ReactElement;
             }
