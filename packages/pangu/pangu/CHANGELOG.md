@@ -1,5 +1,11 @@
 # @montagejs/pangu
 
+## 0.1.0
+
+### Minor Changes
+
+-   [`7875acf`](https://github.com/bigbigDreamer/montage/commit/7875acf) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - feat: support hoc and some hooks
+
 ## 0.0.3
 
 ### Patch Changes

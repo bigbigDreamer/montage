@@ -6,7 +6,16 @@ import cleaner from 'rollup-plugin-cleaner';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const external = ['react', 'react-dom', 'react-router-dom', 'react/jsx-runtime', '@types/*'];
+const external = [
+    'react',
+    'react-dom',
+    'react-router-dom',
+    'react/jsx-runtime',
+    '@types/*',
+    'qs',
+    'react-loadable',
+    'lodash-es',
+];
 
 export default {
     input: './src/index.ts',
@@ -40,7 +49,7 @@ export default {
         }),
         // swc 提供 jsx runtime
         swc({
-            exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
+            exclude: ['.*\\.js$', '.*\\.map$'],
             // 暂时关闭 corJs
             // env: {
             //     coreJs: '3.21.1',

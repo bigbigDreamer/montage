@@ -11,8 +11,11 @@
 - [x] Lazy Load Route
 - [x] Auto SetUp Page Title
 - [x] AOP Plugin
-- [ ] HOC
+  - [x] Inner Plugin With forRoutes
+- [x] HOC
 - [ ] Hooks
+  - [x] useRouter
+  - [ ] useQuery
 - [ ] Preload Route Source
 - [ ] Keep-Alive Router
 - [ ] PanGuFC

@@ -2,6 +2,7 @@
     "extends": "../../../tsconfig.json",
     "compilerOptions": {
         "declarationDir": "./es/",
-        "emitDeclarationOnly": true
+        "emitDeclarationOnly": true,
+        "typeRoots": ["./node_modules/@types"]
     }
 }
