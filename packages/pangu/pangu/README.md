@@ -13,10 +13,13 @@
 - [x] AOP Plugin
   - [x] Inner Plugin With forRoutes
 - [x] HOC
-- [ ] Hooks
+- [x] Hooks
   - [x] useRouter
-  - [ ] useQuery
-- [ ] Preload Route Source
+  - [x] useQuery
+- [x] Preload Route Source
+  - [x] Plugin IOC
+  - [ ] Provider 
+    - [ ] `useProvider` consume 
 - [ ] Keep-Alive Router
 - [ ] PanGuFC
 

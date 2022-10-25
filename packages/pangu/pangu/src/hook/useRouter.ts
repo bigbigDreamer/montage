@@ -13,7 +13,12 @@ export type RouterOperateOptions = {
     customFormat?(path: string, query?: Record<string, unknown>): string;
 } & NavigateOptions;
 
-const useRouter = () => {
+export type UseRouterHookReturnProps = {
+    redirect(path: string, query?: Record<string, unknown>, options?: RouterOperateOptions): void;
+    replace(path: string, query?: Record<string, unknown>, options?: RouterOperateOptions): void;
+};
+
+const useRouter = (): UseRouterHookReturnProps => {
     const navigate = useNavigate();
 
     const pathFormat = useCallback(

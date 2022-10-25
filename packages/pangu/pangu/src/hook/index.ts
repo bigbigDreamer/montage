@@ -1,3 +1,7 @@
 import useRouter from './useRouter';
+import useQuery from './useQuery';
 
-export { useRouter };
+export * from './useQuery';
+export * from './useRouter';
+
+export { useRouter, useQuery };

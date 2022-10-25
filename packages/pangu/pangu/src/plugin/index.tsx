@@ -5,10 +5,17 @@
  */
 import type { ReactElement, ReactNode } from 'react';
 import type { PanGuRouteObject } from '../router';
+import { LoadableComponent } from 'react-loadable';
 
 export type RoutePlugin = {
     key?: string | number | unknown;
-    inner?(children: ReactNode, options?: unknown, route?: PanGuRouteObject): ReactElement;
+    inner?(
+        children: ReactNode,
+        options?: unknown,
+        route?: PanGuRouteObject,
+        // we can get every lazy route instance, and we can preload every route source and then
+        LoadableBar?: LoadableComponent | Record<string, unknown>,
+    ): ReactElement;
     outer?(children: ReactNode, options?: unknown): ReactElement;
     forRoutes?(): string | string[];
 };
@@ -35,8 +42,18 @@ class PluginsEngine {
     }
 
     compose(props: { children: ReactElement; type: PluginType }): ReactElement;
-    compose(props: { children: ReactElement; type: PluginType; route: any }): ReactElement;
-    compose(props: { children: ReactElement; type: PluginType; route?: any }): ReactElement {
+    compose(props: {
+        children: ReactElement;
+        type: PluginType;
+        route: PanGuRouteObject;
+        LoadableBar: LoadableComponent | Record<string, unknown>;
+    }): ReactElement;
+    compose(props: {
+        children: ReactElement;
+        type: PluginType;
+        route?: PanGuRouteObject;
+        LoadableBar?: LoadableComponent | Record<string, unknown>;
+    }): ReactElement {
         const { type, children, route } = props;
         let finalChildren = children;
         this.plugins.forEach(routePlugin => {
@@ -53,7 +70,11 @@ class PluginsEngine {
                     finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
                 } else if (typeof forRoutes === 'string' && forRoutes === route?.path) {
                     finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
-                } else if (Array.isArray(forRoutes) && forRoutes.includes(route?.path)) {
+                } else if (
+                    route?.path &&
+                    Array.isArray(forRoutes) &&
+                    forRoutes.includes(route!.path)
+                ) {
                     finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
                 }
             } else if (type === PluginTypes.OUTER) {

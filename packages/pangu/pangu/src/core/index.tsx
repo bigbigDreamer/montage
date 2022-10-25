@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom';
-import { type DOMElement } from "react";
-import Plugins, { type RoutePlugin } from "../plugin";
-import Router, { type PanGuRouteObject } from "../router";
+import { type DOMElement } from 'react';
+import Plugins, { type RoutePlugin } from '../plugin';
+import Router, { type PanGuRouteObject, type RouterModeType, RouterMode } from '../router';
 
 type PanGuConstructorStruts = {
     container?: HTMLElement;
     routes: PanGuRouteObject[];
-    mode?: 'hash'|'history';
+    mode?: RouterModeType;
 };
 
 class PanGu {
@@ -14,14 +14,14 @@ class PanGu {
 
     static defaultProps = {
         container: document.getElementById('root') as HTMLElement,
-        mode: 'history'
+        mode: RouterMode.HISTORY,
     };
     #routerInstance: Router;
-    private mode: "hash" | "history" | undefined;
+    private mode?: RouterModeType;
 
     constructor(p: PanGuConstructorStruts = { routes: [] }) {
         Object.assign(this, PanGu.defaultProps, p);
-        this.#routerInstance = new Router({ routes: p.routes, mode: this.mode as "hash" | "history" });
+        this.#routerInstance = new Router({ routes: p.routes, mode: this.mode as RouterModeType });
     }
 
     start() {

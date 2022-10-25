@@ -1,3 +1,7 @@
+import { forwardRef, useMemo } from 'react';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
+import { useRouter, useQuery } from '../hook';
+
 import type {
     ForwardRefExoticComponent,
     RefAttributes,
@@ -5,13 +9,14 @@ import type {
     ComponentType,
 } from 'react';
 import type { Location, Params, NavigateProps } from 'react-router-dom';
-import { forwardRef, useMemo } from 'react';
-import { useNavigate, useParams, useLocation } from 'react-router-dom';
+import type { UseRouterHookReturnProps } from '../hook';
 
-type WrapperComponentProps = {
+export type WrapperComponentProps = {
     location: Location;
     params: Params;
     navigate: NavigateProps;
+    router: UseRouterHookReturnProps;
+    query: Record<string, unknown>;
 };
 
 function withRouter<P, T = any>(
@@ -22,14 +27,18 @@ function withRouter<P, T = any>(
         const location = useLocation();
         const params = useParams();
         const navigate = useNavigate();
+        const router = useRouter();
+        const query = useQuery();
 
         const wrapperProps = useMemo(
             () => ({
                 location,
                 params,
                 navigate,
+                router,
+                query,
             }),
-            [location, params, navigate],
+            [location, params, navigate, router, query],
         );
 
         return <WrapperCom {...props} {...wrapperProps} ref={ref} />;

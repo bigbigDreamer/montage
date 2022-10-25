@@ -1,10 +1,19 @@
-import { BrowserRouter, HashRouter, Navigate, Route, Routes, type RouteObject } from 'react-router-dom';
+import {
+    BrowserRouter,
+    HashRouter,
+    Navigate,
+    Route,
+    Routes,
+    type RouteObject,
+} from 'react-router-dom';
 import Plugins from '../plugin';
 import type { ComponentType, FC, ReactElement } from 'react';
-import Loadable, { type LoadingComponentProps } from 'react-loadable';
+import Loadable, { LoadableComponent, type LoadingComponentProps } from 'react-loadable';
 import { Title, Loading } from '../helper';
 
-export type DynamicImportComponentType = () => Promise<ComponentType | { default: ComponentType }>
+import { PluginTypes } from '../plugin';
+
+export type DynamicImportComponentType = () => Promise<ComponentType | { default: ComponentType }>;
 
 export type PanGuRouteObject = {
     lazy?: boolean;
@@ -14,16 +23,25 @@ export type PanGuRouteObject = {
     path: string;
     children?: PanGuRouteObject[];
     loading?: ComponentType<LoadingComponentProps>;
-} & RouteObject;
+    keepAlive?: boolean;
+} & RouteObject &
+    Record<string, unknown>; // 方便外部扩展
 
-type RouterProps = {
+export enum RouterMode {
+    HASH = 'hash',
+    HISTORY = 'history',
+}
+
+export type RouterModeType = RouterMode.HASH | RouterMode.HISTORY;
+
+export type RouterProps = {
     routes: PanGuRouteObject[];
-    mode: 'hash'|'history';
+    mode: RouterModeType;
 };
 
 class Router {
     readonly #routes: PanGuRouteObject[];
-    readonly #mode: "hash" | "history";
+    readonly #mode: RouterModeType;
 
     constructor(p: RouterProps) {
         this.#routes = p.routes;
@@ -53,26 +71,38 @@ class Router {
                 throw Error("Route config property 'children' must be array!");
             }
 
+            let LoadableBar: LoadableComponent | Record<string, unknown> = lazy
+                ? Loadable({
+                      loader: component as DynamicImportComponentType,
+                      loading: loading || Loading,
+                  })
+                : {};
+
             /**
              * @desc Map component to render wrapper
              */
-            const AliasC = lazy ? Loadable({
-                loader: component as DynamicImportComponentType,
-                loading: loading || Loading
-            }) as FC<unknown> : component as FC<unknown>;
+            const AliasC = lazy
+                ? (LoadableBar as unknown as FC<unknown>)
+                : (component as FC<unknown>);
 
             const WrapperComponent = title ? (
                 <Title title={title}>
                     <AliasC />
                 </Title>
-                ) : (
+            ) : (
                 <AliasC />
-            ) ;
+            );
 
             /**
              * @desc wrapper component with inner plugin
+             * @todo: 思考：如何减少插件的无用执行次数，能否懒加载，先标识位有，等真正激活路由，渲染路由之前，再执行渲染
              */
-            let wrapComponent = Plugins.compose({ type: 'inner', children: WrapperComponent, route });
+            let wrapComponent = Plugins.compose({
+                type: PluginTypes.INNER,
+                children: WrapperComponent,
+                route,
+                LoadableBar,
+            });
 
             if (children && children.length === 0) {
                 return <Route element={wrapComponent} path={path} key={path} />;
@@ -91,20 +121,15 @@ class Router {
     }
 
     private createBrowserRouter() {
-
-        const AppRouter = this.#mode === 'hash' ? HashRouter : BrowserRouter;
+        const AppRouter = this.#mode === RouterMode.HASH ? HashRouter : BrowserRouter;
 
         const Inner = () => (
             <AppRouter>
-                <Routes>
-                    {
-                        this.createRoutesFromConfig()
-                    }
-                </Routes>
+                <Routes>{this.createRoutesFromConfig()}</Routes>
             </AppRouter>
-        )
+        );
 
-        return <Inner/>
+        return <Inner />;
     }
 
     /**
@@ -112,7 +137,7 @@ class Router {
      */
     init(): ReactElement {
         const browserRouter = this.createBrowserRouter();
-        return Plugins.compose({ type: 'outer', children: browserRouter });
+        return Plugins.compose({ type: PluginTypes.OUTER, children: browserRouter });
     }
 }
 
