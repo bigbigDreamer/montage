@@ -6,7 +6,7 @@ import Router, { type PanGuRouteObject, type RouterModeType, RouterMode } from '
 type PanGuConstructorStruts = {
     container?: HTMLElement;
     routes: PanGuRouteObject[];
-    mode?: RouterModeType;
+    mode?: RouterModeType | string;
 };
 
 class PanGu {
