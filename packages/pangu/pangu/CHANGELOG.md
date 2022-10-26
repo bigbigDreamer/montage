@@ -1,5 +1,11 @@
 # @montagejs/pangu
 
+## 0.1.1
+
+### Patch Changes
+
+-   [`9111aa1`](https://github.com/bigbigDreamer/montage/commit/9111aa1) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - feat: support preload route mode
+
 ## 0.1.0
 
 ### Minor Changes
