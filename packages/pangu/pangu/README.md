@@ -18,10 +18,10 @@
   - [x] useQuery
 - [x] Preload Route Source
   - [x] Plugin BASE IOC
-  - [ ] ~~Provider~~ 
-    - [ ] ~~`useProvider` consume~~
-  - [ ] ~~Plugin~~
-    - [ ] ~~`pangu-plugin-route-preload`~~
+  - [x] Provider
+    - [x] `useProvider` consume
+  - [x] Plugin
+    - [x] `pangu-plugin-route-preload`
 - [ ] Keep-Alive Router
 - [ ] PanGuFC
 
