@@ -34,7 +34,7 @@ export default {
         }),
         // swc 提供 jsx runtime
         swc({
-            exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
+            exclude: ['.*\\.js$', '.*\\.map$'],
             jsc: {
                 loose: true,
                 externalHelpers: true,

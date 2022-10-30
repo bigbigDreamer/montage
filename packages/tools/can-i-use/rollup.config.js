@@ -42,7 +42,7 @@ export default {
         }),
         // swc 提供 jsx runtime
         swc({
-            exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
+            exclude: ['.*\\.js$', '.*\\.map$'],
             // 暂时关闭 corJs
             // env: {
             //     coreJs: '3.21.1',

@@ -45,7 +45,7 @@ export default {
             targets: ['./es/', './lib/', '.dist'],
         }),
         swc({
-            exclude: ['.*.js$', '.*.map$', '.*.d.ts$'],
+            exclude: ['.*\\.js$', '.*\\.map$'],
             jsc: {
                 loose: true,
                 externalHelpers: true,
