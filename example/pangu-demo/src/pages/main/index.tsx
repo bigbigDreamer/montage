@@ -1,8 +1,12 @@
 import './index.less';
 import { useNavigate } from '@montagejs/pangu';
+import { usePluginProvider } from '@montagejs/pangu-plugin-route-preload';
 
 function Main() {
     const navigate = useNavigate();
+    const store = usePluginProvider();
+
+    console.log(store, '--');
 
     return (
         <div className="main-page">

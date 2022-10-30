@@ -54,7 +54,7 @@ class PluginsEngine {
         route?: PanGuRouteObject;
         LoadableBar?: LoadableComponent | Record<string, unknown>;
     }): ReactElement {
-        const { type, children, route } = props;
+        const { type, children, route, LoadableBar } = props;
         let finalChildren = children;
         this.plugins.forEach(routePlugin => {
             const { instance, options } = routePlugin;
@@ -67,15 +67,30 @@ class PluginsEngine {
             }
             if (type === PluginTypes.INNER) {
                 if (!forRoutes) {
-                    finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
+                    finalChildren = wrapperFn?.(
+                        finalChildren,
+                        options,
+                        route,
+                        LoadableBar,
+                    ) as ReactElement;
                 } else if (typeof forRoutes === 'string' && forRoutes === route?.path) {
-                    finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
+                    finalChildren = wrapperFn?.(
+                        finalChildren,
+                        options,
+                        route,
+                        LoadableBar,
+                    ) as ReactElement;
                 } else if (
                     route?.path &&
                     Array.isArray(forRoutes) &&
                     forRoutes.includes(route!.path)
                 ) {
-                    finalChildren = wrapperFn?.(finalChildren, options, route) as ReactElement;
+                    finalChildren = wrapperFn?.(
+                        finalChildren,
+                        options,
+                        route,
+                        LoadableBar,
+                    ) as ReactElement;
                 }
             } else if (type === PluginTypes.OUTER) {
                 finalChildren = wrapperFn?.(finalChildren, options) as ReactElement;

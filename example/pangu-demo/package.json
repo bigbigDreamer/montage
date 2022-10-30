@@ -1,6 +1,6 @@
 {
     "name": "pangu-demo",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "private": true,
     "scripts": {
@@ -13,7 +13,8 @@
     "author": "",
     "dependencies": {
         "@aktiv/launcher": "^1.5.0",
-        "@montagejs/pangu": "workspace:^0.0.2",
+        "@montagejs/pangu": "workspace:^0.1.3",
+        "@montagejs/pangu-plugin-route-preload": "workspace:^0.0.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },

@@ -5,4 +5,4 @@ packages:
   - 'packages/tools/*'
   - 'packages/pangu/*'
   - 'website'
-  - 'example'
+  - 'example/**'

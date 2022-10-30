@@ -1,6 +1,7 @@
 import PanGu from '@montagejs/pangu';
 import { ReactChild, ReactFragment, ReactPortal } from 'react';
 import RouterConfig from './config/router.config';
+import routePreloadPlugin from '@montagejs/pangu-plugin-route-preload';
 
 const innerPlugin = {
     name: 'MyInner',
@@ -24,5 +25,6 @@ const app = new PanGu({
 });
 
 app.use(innerPlugin);
+app.use(routePreloadPlugin);
 
 app.start();

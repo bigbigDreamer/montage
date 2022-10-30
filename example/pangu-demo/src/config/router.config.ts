@@ -1,14 +1,17 @@
 import Main from '../pages/main';
 import About from '../pages/about';
+import { PanGuRouteObject } from '@montagejs/pangu';
 
-const RouterConfig = [
+const RouterConfig: PanGuRouteObject[] = [
     {
         path: '/',
-        component: Main,
+        component: () => import('../pages/main'),
+        lazy: true,
     },
     {
         path: '/about',
-        component: About,
+        component: () => import('../pages/about'),
+        lazy: true,
     },
 ];
 

@@ -1,5 +1,11 @@
 # @montagejs/pangu
 
+## 0.1.3
+
+### Patch Changes
+
+-   [`ebc33e8`](https://github.com/bigbigDreamer/montage/commit/ebc33e8) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: LoadableBar not transform for inner plugin
+
 ## 0.1.2
 
 ### Patch Changes
