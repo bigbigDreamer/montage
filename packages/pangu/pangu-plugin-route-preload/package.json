@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/pangu-plugin-route-preload",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "react pangu for react router",
     "main": "./lib/index.js",
     "module": "./es/index.js",

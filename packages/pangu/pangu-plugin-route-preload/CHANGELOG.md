@@ -1,5 +1,11 @@
 # @montagejs/pangu-plugin-route-preload
 
+## 0.0.4
+
+### Patch Changes
+
+-   [`04c8d3f`](https://github.com/bigbigDreamer/montage/commit/04c8d3f) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - typro: change type import source
+
 ## 0.0.3
 
 ### Patch Changes

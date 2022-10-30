@@ -6,12 +6,21 @@ function Main() {
     const navigate = useNavigate();
     const store = usePluginProvider();
 
-    console.log(store, '--');
+    const handleClick = () => {
+        console.log(store, '===');
+        navigate('/about');
+    };
+
+    const handleOver = () => {
+        (store as any).get('/about').preload();
+    };
 
     return (
         <div className="main-page">
             <h3>hello 欢迎使用ak，点击按钮跳转about页面</h3>
-            <button onClick={() => navigate('/about')}>点击跳转</button>
+            <button onMouseOver={handleOver} onClick={handleClick}>
+                点击跳转
+            </button>
         </div>
     );
 }

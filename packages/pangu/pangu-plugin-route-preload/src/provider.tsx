@@ -1,4 +1,4 @@
-import { createContext, type FC, useEffect } from 'react';
+import { createContext, type FC } from 'react';
 import { pluginStore } from './store';
 import type { LoadableComponent } from 'react-loadable';
 import type { PanGuRouteObject } from '@montagejs/pangu';
@@ -11,13 +11,7 @@ export type PluginProviderProps = {
     route?: PanGuRouteObject;
 };
 
-const PluginProvider: FC<PluginProviderProps> = ({ children, LoadableBar, route }) => {
-    useEffect(() => {
-        if (!pluginStore.has(route!.path)) {
-            pluginStore.set(route!.path, LoadableBar);
-        }
-    }, []);
-
+const PluginProvider: FC<PluginProviderProps> = ({ children }) => {
     return <PluginContext.Provider value={pluginStore}>{children}</PluginContext.Provider>;
 };
 

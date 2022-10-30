@@ -1,6 +1,10 @@
 import './index.less';
+import { usePluginProvider } from '@montagejs/pangu-plugin-route-preload';
 
 function About() {
+    const store = usePluginProvider();
+
+    console.log(store, '--');
     return (
         <div className="about-page">
             <h3>about page</h3>
