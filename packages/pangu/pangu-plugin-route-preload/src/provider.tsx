@@ -1,7 +1,7 @@
 import { createContext, type FC, useEffect } from 'react';
 import { pluginStore } from './store';
 import type { LoadableComponent } from 'react-loadable';
-import type { PanGuRouteObject } from '@montagejs/pangu/es/router';
+import type { PanGuRouteObject } from '@montagejs/pangu';
 import type { PluginStore } from './store';
 
 export const PluginContext = createContext<PluginStore>(pluginStore);
