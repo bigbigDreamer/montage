@@ -36,5 +36,5 @@ Create `montage` tools that remind others.
 
 ## LICENSE
 
-The project use [UnLicense](./LICENSE).
+The project use [MIT](./LICENSE).
 
