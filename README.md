@@ -15,13 +15,15 @@
 ## Todolist
 
 - [x] Use `dumi` as repo docs framework.
+  - [x] Fully removed.
 - [x] Use `pnpm` & `changeset` replace `lerna`.
 - [x] Use `github action` auto build docs.
 - [x] Use `esbuild`、`swc` build components.
 - [ ] Use `husky` & `eslint` & `prettier` standard code style.
-- [ ] Try `vuepress` refactor docs site.
-- [ ] Try [`Rush`](https://rushjs.io/) refactor `changeset`.
-- [ ] Use `jest` as unit test tool.
+- [x] Try `docusaurus` refactor docs site.
+- [ ] ~~Try [`Rush`](https://rushjs.io/) refactor `changeset`.~~
+  - Hard to use, So no don't use it.
+- [x] Use `Vitest` as unit test tool.
 
 ## Vision
 

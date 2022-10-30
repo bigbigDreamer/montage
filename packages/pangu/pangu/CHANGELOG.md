@@ -1,5 +1,11 @@
 # @montagejs/pangu
 
+## 0.1.2
+
+### Patch Changes
+
+-   [`d7e567a`](https://github.com/bigbigDreamer/montage/commit/d7e567a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - feat: add pangu preload plugin
+
 ## 0.1.1
 
 ### Patch Changes
