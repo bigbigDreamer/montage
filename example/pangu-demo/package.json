@@ -6,8 +6,7 @@
     "scripts": {
         "start": "ak start",
         "build": "ak build",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "prepare": "husky install"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
