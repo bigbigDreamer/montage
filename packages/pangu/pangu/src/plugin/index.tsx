@@ -4,7 +4,7 @@
  *   2. 区分插件类别，inner 还是 outer
  */
 import type { ReactElement, ReactNode } from 'react';
-import { LoadableComponent } from 'react-loadable';
+import type { LoadableComponent } from 'react-loadable';
 import type { PanGuRouteObject } from '../router';
 
 export type RoutePlugin = {

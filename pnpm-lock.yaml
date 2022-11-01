@@ -246,21 +246,25 @@ importers:
 
   packages/pangu/pangu:
     specifiers:
+      '@types/kind-of': ^6.0.0
       '@types/lodash-es': ^4.17.6
       '@types/qs': ^6.9.7
       '@types/react': 17.0.2
       '@types/react-dom': 17.0.2
       '@types/react-loadable': ^5.5.6
+      kind-of: ^6.0.3
       lodash-es: ^4.17.21
       qs: ^6.11.0
       react-loadable: ^5.5.0
       react-router-dom: ^6.4.1
     dependencies:
+      kind-of: 6.0.3
       lodash-es: 4.17.21
       qs: 6.11.0
       react-loadable: 5.5.0
       react-router-dom: 6.4.2
     devDependencies:
+      '@types/kind-of': 6.0.0
       '@types/lodash-es': 4.17.6
       '@types/qs': 6.9.7
       '@types/react': 17.0.2
@@ -4316,6 +4320,12 @@ packages:
     dependencies:
       '@types/node': 18.11.3
     dev: false
+
+  /@types/kind-of/6.0.0:
+    resolution: {integrity: sha512-OBts6MHCrq558cvND5nsWhoThwJaNu5lmGnSp3H0gFzQQc5QYM9p7HajIdS+2bgDquGX1qLZCPlyuYSxMDffAg==}
+    dependencies:
+      '@types/node': 18.11.3
+    dev: true
 
   /@types/lodash-es/4.17.6:
     resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}

@@ -4,7 +4,7 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { omit } from 'lodash-es';
-import { queryParse, querySerialize } from '../helper/query';
+import { queryParse, querySerialize } from '../helper';
 
 import type { NavigateOptions } from 'react-router-dom';
 

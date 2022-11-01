@@ -24,6 +24,9 @@
     - [x] `pangu-plugin-route-preload`
 - [ ] Keep-Alive Router
 - [ ] PanGuFC
+- [ ] DefinePlugin
+  - [ ] Auto insert uniq key
+- [ ] DefineRouterConfig
 
 ## Install
 

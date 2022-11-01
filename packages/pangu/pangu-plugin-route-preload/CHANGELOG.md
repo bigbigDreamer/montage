@@ -1,5 +1,11 @@
 # @montagejs/pangu-plugin-route-preload
 
+## 0.0.5
+
+### Patch Changes
+
+-   [`80d7b5d`](https://github.com/bigbigDreamer/montage/commit/80d7b5d) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - feat: some helper function for pangu;
+
 ## 0.0.4
 
 ### Patch Changes

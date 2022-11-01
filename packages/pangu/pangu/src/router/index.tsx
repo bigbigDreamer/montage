@@ -8,8 +8,8 @@ import {
 } from 'react-router-dom';
 import Plugins from '../plugin';
 import type { ComponentType, FC, ReactElement } from 'react';
-import Loadable, { LoadableComponent, type LoadingComponentProps } from 'react-loadable';
-import { Title, Loading } from '../helper';
+import Loadable, { type LoadableComponent, type LoadingComponentProps } from 'react-loadable';
+import { Title, Loading, ErrorLog } from '../helper';
 
 import { PluginTypes } from '../plugin';
 
@@ -63,12 +63,14 @@ class Router {
                 return <Route key={path} path={path} element={<Navigate to={path} />} />;
             }
 
+            // !redirect and no component
             if (!component) {
-                throw Error("Route config property 'component' can't be empty!");
+                throw Error(ErrorLog.RouteNoComponent);
             }
 
+            // children but not array type
             if (children && !Array.isArray(children)) {
-                throw Error("Route config property 'children' must be array!");
+                throw Error(ErrorLog.ChildrenNotAsArray);
             }
 
             let LoadableBar: LoadableComponent | Record<string, unknown> = lazy

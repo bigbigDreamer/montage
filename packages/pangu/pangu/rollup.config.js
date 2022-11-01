@@ -15,6 +15,7 @@ const external = [
     'qs',
     'react-loadable',
     'lodash-es',
+    'kind-of',
 ];
 
 export default {

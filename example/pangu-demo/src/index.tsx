@@ -1,11 +1,9 @@
-import PanGu from '@montagejs/pangu';
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
+import PanGu, { definePlugin } from '@montagejs/pangu';
 import RouterConfig from './config/router.config';
 import routePreloadPlugin from '@montagejs/pangu-plugin-route-preload';
 
-const innerPlugin = {
-    name: 'MyInner',
-    // @ts-ignore
+const innerPlugin = definePlugin({
+    key: 'innerPlugin',
     inner(children) {
         console.log(children, 'children');
         return (
@@ -18,7 +16,7 @@ const innerPlugin = {
     forRoutes() {
         return ['/about'];
     },
-};
+});
 
 const app = new PanGu({
     routes: RouterConfig,
