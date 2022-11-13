@@ -1,5 +1,11 @@
 # @montagejs/pangu-plugin-route-preload
 
+## 0.0.6
+
+### Patch Changes
+
+-   [`c4e8c7c`](https://github.com/bigbigDreamer/montage/commit/c4e8c7c) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix return value type can't right in different sence
+
 ## 0.0.5
 
 ### Patch Changes
