@@ -72,11 +72,16 @@ const config = {
                     },
                     {
                         type: 'doc',
+                        docId: 'intro/pangu',
+                        position: 'left',
+                        label: 'PanGu',
+                    },
+                    {
+                        type: 'doc',
                         docId: 'intro/plugins',
                         position: 'left',
                         label: 'Plugins',
                     },
-                    { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/bigbigDreamer/montage',
                         label: 'GitHub',
@@ -86,52 +91,10 @@ const config = {
             },
             footer: {
                 style: 'dark',
-                links: [
-                    {
-                        title: 'Docs',
-                        items: [
-                            {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'Community',
-                        items: [
-                            {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'Blog',
-                                to: 'https://dev.bigdreamer.cc',
-                            },
-                            {
-                                label: 'GitHub',
-                                href: 'https://github.com/bigbigDreamer',
-                            },
-                        ],
-                    },
-                ],
                 copyright: `Copyright © ${new Date().getFullYear()}, Creation By 不换.`,
             },
             prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
+                theme: require('prism-react-renderer/themes/vsLight'),
             },
             liveCodeBlock: {
                 /**

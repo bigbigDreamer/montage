@@ -1,0 +1,123 @@
+# PanGu(盘古)
+
+## 释义
+
+中文释义中有开天辟地之意。
+
+## 背景
+
+1. `React` 单页 `SPA` 应用中，管理路由需要反复接入**繁复**的代码，多个项目不能统一路由管理方式；
+2. 基于 `AOP` 思想的插件管理启动器；
+    - 支持路由级别的 `inner` 插件
+    - 支持应用级别的 `outer` 插件
+3. 路由级别的资源**懒加载**和**预加载**；
+4. 路由级别的权限控制；
+5. 完备的生命周期；
+
+## 如何使用
+
+### 基本使用
+
+```tsx title="main.ts"
+import PanGu, { defineRouterConfig } from '@montagejs/pangu';
+
+const app = new PanGu({
+    routes: defineRouterConfig([
+        {
+            title: 'Hello World',
+            lazy: true,
+            component: () => import('./pages/main'),
+        },
+    ]),
+});
+
+app.start();
+```
+
+### 插件编写
+
+**Inner Plugin**
+
+适用于路由级别的插件。
+
+场景：单路由权限设置，指定路由的模态弹窗。
+
+```tsx
+import { definePlugin } from '@montagejs/pangu';
+
+const myInnerPlugin = definePlugin({
+    key: 'awesomeInnerKey',
+    inner(children) {
+        return <div className="inner-plugin-wrapper">{children}</div>;
+    },
+    // if set this, only used by as follows routes
+    forRoutes() {
+        return ['/about', '/home'];
+    },
+});
+
+export { myInnerPlugin };
+```
+
+**Outer Plugin**
+
+应用级别的插件。
+
+场景：统一收口公共的模态弹窗。
+
+```tsx
+import { definePlugin } from '@montagejs/pangu';
+
+const myOuterPlugin = definePlugin({
+    key: 'awesomeOuterKey',
+    inner(children) {
+        return <div className="outer-plugin-wrapper">{children}</div>;
+    },
+});
+
+export { myOuterPlugin };
+```
+
+### 路由配置（核心）
+
+| 参数 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| **lazy** | 开启路由懒加载 | `boolean` | `false` | `0.1.4` |
+| **component** | 路由组件 | `ComponentType｜() => import(path: string)` | `undefined` | `0.1.4` |
+| **title** | 路由页面标题 | `string` | `undefined` | `0.1.4` |
+| **path** | 路由路径 | `string` | `undefined` | `0.1.4` |
+| **redirect** | 路由重定向路径 | `string` | `undefined` | `0.1.4` |
+| **children** | 子路由配置 | `PanguRouteObject[]` | `[]` | `0.1.4` |
+| **loading** | 懒加载动画 | `ComponentType` | `Inside Loading` | `0.1.4` |
+| **keepAlive** | 是否保活，**此功能尚未开发完成** | `boolean` | `false` | `无版本` |
+
+**如何开启路由预加载？**
+
+```ts title="main.ts"
+import routePreloadPlugin from '@montagejs/pangu-plugin-route-preload';
+import PanGu, { definePlugin } from '@montagejs/pangu';
+
+const app = new PanGu({
+    routes: definePlugin([])
+})
+
+app.use(routePreloadPlugin);
+app.start();
+```
+
+```tsx title="component.tsx"
+import { usePluginProvider } from '@montagejs/pangu-plugin-route-preload';
+
+function DemoPreload() {
+    const store = usePluginProvider();
+
+    const handleOver = () => {
+        store?.get('/about').preload();
+    };
+
+    return (
+        <button onClick={handleOver}>Will Preload about route source</button>
+    )
+}
+
+```

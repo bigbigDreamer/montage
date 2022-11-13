@@ -12,7 +12,7 @@ function Main() {
     };
 
     const handleOver = () => {
-        (store as any).get('/about').preload();
+        store?.get('/about').preload();
     };
 
     return (

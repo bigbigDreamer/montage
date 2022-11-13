@@ -4,10 +4,12 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: url('https://to-out-use.oss-cn-hangzhou.aliyuncs.com/common/StockSnap_CKDVQPAIBQ.jpg') no-repeat;
+  background-size: cover;
 }
 
 @media screen and (max-width: 996px) {

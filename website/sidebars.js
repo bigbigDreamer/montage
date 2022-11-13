@@ -32,6 +32,20 @@ const sidebars = {
             ],
         },
     ],
+    pangu: [
+        {
+            type: 'category',
+            label: 'Getting Started',
+            collapsed: false,
+            items: ['intro/pangu'],
+        },
+        {
+            type: 'category',
+            label: 'PanGu',
+            collapsed: false,
+            items: ['pangu/pangu/index'],
+        },
+    ],
     plugins: [
         {
             type: 'category',
