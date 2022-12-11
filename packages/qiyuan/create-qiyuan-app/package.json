@@ -1,0 +1,25 @@
+{
+    "name": "create-qiyuan-app",
+    "version": "0.0.2",
+    "description": "",
+    "main": "index.js",
+    "bin": {
+        "create-qiyuan-app": "./index.js"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@montagejs/check-pkg-update": "^1.2.0",
+        "check-node-version": "^4.2.1",
+        "commander": "^9.4.1",
+        "consola": "^2.15.3",
+        "just-task": "^1.7.0"
+    }
+}

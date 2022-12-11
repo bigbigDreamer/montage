@@ -1,0 +1,37 @@
+{
+    "name": "@montagejs/lint-config-qiyuan",
+    "version": "1.0.0",
+    "description": "",
+    "main": "eslint.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "exports": {
+        "./eslint": "./eslint.js",
+        "./lintstagedrc": "./lintstagedrc.js",
+        "./stylelint": "./stylelint.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "peerDependencies": {
+        "eslint": "^8.0.0",
+        "stylelint": "^14.1.0"
+    },
+    "dependencies": {
+        "@babel/core": "^7.20.2",
+        "@babel/eslint-parser": "^7.19.1",
+        "@rushstack/eslint-patch": "^1.2.0",
+        "@typescript-eslint/eslint-plugin": "^5.6.0",
+        "@typescript-eslint/parser": "^5.6.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.24.0",
+        "postcss-less": "^6.0.0",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-recommended-less": "^1.0.4",
+        "stylelint-config-standard": "^24.0.0",
+        "stylelint-less": "^1.0.6",
+        "stylelint-prettier": "^2.0.0"
+    }
+}

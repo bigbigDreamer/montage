@@ -26,6 +26,7 @@
         "types",
         "jest.config.js",
         "babel.config.js",
-        "vite.config.ts"
+        "vite.config.ts",
+        ".eslintrc.js"
     ]
 }

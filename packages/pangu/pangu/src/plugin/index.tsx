@@ -28,7 +28,7 @@ export enum PluginTypes {
 }
 
 class PluginsEngine {
-    private readonly plugins: { instance: RoutePlugin; options?: unknown }[];
+    private plugins: { instance: RoutePlugin; options?: unknown }[];
     constructor() {
         this.plugins = [];
     }
@@ -39,6 +39,11 @@ class PluginsEngine {
 
     get() {
         return this.plugins;
+    }
+
+    // when use qinkun or other
+    destory() {
+        this.plugins = [];
     }
 
     compose(props: { children: ReactElement; type: PluginType }): ReactElement;

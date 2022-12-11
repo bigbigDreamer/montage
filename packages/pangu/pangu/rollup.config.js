@@ -32,12 +32,6 @@ export default {
             sourcemap: true,
             format: 'esm',
         },
-        {
-            file: './dist/index.js',
-            sourcemap: false,
-            format: 'umd',
-            name: 'ReactWalineClient',
-        },
     ],
     external,
     plugins: [

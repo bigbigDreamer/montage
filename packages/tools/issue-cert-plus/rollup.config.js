@@ -26,13 +26,13 @@ export default {
     input: './src/index.ts',
     output: [
         {
-            file: './lib/index.js',
+            file: './lib/eslint.js',
             sourcemap: true,
             format: 'cjs',
             esModule: false,
         },
         {
-            file: './es/index.js',
+            file: './es/eslint.js',
             sourcemap: true,
             format: 'esm',
         },

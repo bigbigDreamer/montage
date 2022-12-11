@@ -20,7 +20,7 @@ export default Merge.merge(base, {
         client: resolve("./src/entry-client.js"),
     },
     output: {
-        filename: 'index.js',
+        filename: 'eslint.js',
         publicPath: "/",
     },
     module: {

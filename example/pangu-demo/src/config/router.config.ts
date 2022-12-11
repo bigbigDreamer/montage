@@ -1,14 +1,14 @@
 import { defineRouterConfig } from '@montagejs/pangu';
+import Main from '../pages/main';
+import About from '../pages/about';
 
 export default defineRouterConfig([
     {
         path: '/',
-        component: () => import('../pages/main'),
-        lazy: true,
+        component: Main,
     },
     {
         path: '/about',
-        component: () => import('../pages/about'),
-        lazy: true,
+        component: About,
     },
 ]);

@@ -1,5 +1,11 @@
 # @montagejs/pangu
 
+## 0.1.5
+
+### Patch Changes
+
+-   [`356b3de`](https://github.com/bigbigDreamer/montage/commit/356b3de) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix plugin should reset when launcher constructor call
+
 ## 0.1.4
 
 ### Patch Changes

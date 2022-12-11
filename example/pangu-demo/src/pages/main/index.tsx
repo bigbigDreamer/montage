@@ -7,12 +7,12 @@ function Main() {
     const store = usePluginProvider();
 
     const handleClick = () => {
-        console.log(store, '===');
         navigate('/about');
     };
 
     const handleOver = () => {
-        store?.get('/about').preload();
+        // @ts-ignore
+        store.get('/about')?.preload?.();
     };
 
     return (
