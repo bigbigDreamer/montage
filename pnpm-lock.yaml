@@ -122,7 +122,7 @@ importers:
       '@aktiv/launcher': ^1.5.0
       '@commitlint/cli': ^12.1.4
       '@commitlint/config-conventional': ^12.1.4
-      '@montagejs/pangu': workspace:^0.1.4
+      '@montagejs/pangu': workspace:^0.1.5
       '@montagejs/pangu-plugin-route-preload': workspace:^0.0.6
       '@types/react': ^17.0.47
       '@types/react-dom': ^17.0.17
@@ -297,7 +297,7 @@ importers:
 
   packages/pangu/pangu-plugin-route-preload:
     specifiers:
-      '@montagejs/pangu': workspace:^0.1.4
+      '@montagejs/pangu': workspace:^0.1.5
       '@types/react': 17.0.2
       '@types/react-loadable': ^5.5.6
     devDependencies:
@@ -351,9 +351,6 @@ importers:
       consola: 2.15.3
       just-task: 1.7.0
 
-  packages/qiyuan/eslint-config-qiyuan:
-    specifiers: {}
-
   packages/qiyuan/lint-config-qiyuan:
     specifiers:
       '@babel/core': ^7.20.2
@@ -387,9 +384,6 @@ importers:
       stylelint-prettier: 2.0.0
 
   packages/qiyuan/prettier-config-qiyuan:
-    specifiers: {}
-
-  packages/qiyuan/qiyuan-create-app:
     specifiers: {}
 
   packages/qiyuan/qiyuan-project-template:
