@@ -497,7 +497,7 @@ importers:
       '@docusaurus/theme-live-codeblock': ^2.2.0
       '@mdx-js/react': ^1.6.22
       '@montagejs/react-lazy-load-image': workspace:^0.0.12
-      '@montagejs/react-waline-client': workspace:^0.1.6
+      '@montagejs/react-waline-client': workspace:^0.1.7
       '@tsconfig/docusaurus': ^1.0.5
       '@types/react': 17.0.2
       '@types/react-dom': 17.0.2
@@ -14738,7 +14738,7 @@ packages:
       schema-utils: 3.1.1
       serialize-javascript: 6.0.0
       terser: 5.15.1
-      webpack: 5.74.0
+      webpack: 5.74.0_webpack-cli@4.10.0
 
   /terser/5.15.1:
     resolution: {integrity: sha512-K1faMUvpm/FBxjBXud0LWVAGxmvoPbZbfTCYbSgaaYQaIXI3/TdI7a7ZGA73Zrou6Q8Zmz3oeUTsp/dj+ag2Xw==}
