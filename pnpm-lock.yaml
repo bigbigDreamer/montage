@@ -269,15 +269,15 @@ importers:
 
   packages/components/react-waline-client:
     specifiers:
-      '@montagejs/rollup-plugin-generate-style': ^0.0.8
+      '@montagejs/rollup-plugin-generate-style': workspace:^0.0.8
       '@waline/client': ^2.6.1
       classnames: ^2.3.1
       postcss: ^8.4.21
     dependencies:
-      '@montagejs/rollup-plugin-generate-style': link:../../plugins/rollup-plugin-generate-style
       '@waline/client': 2.13.0
       classnames: 2.3.2
     devDependencies:
+      '@montagejs/rollup-plugin-generate-style': link:../../plugins/rollup-plugin-generate-style
       postcss: 8.4.21
 
   packages/pangu/pangu:

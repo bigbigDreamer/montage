@@ -23,7 +23,6 @@
         "react": ">=16.8.0"
     },
     "dependencies": {
-        "@montagejs/rollup-plugin-generate-style": "^0.0.8",
         "@waline/client": "^2.6.1",
         "classnames": "^2.3.1"
     },
@@ -38,6 +37,7 @@
         "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-waline-client"
     },
     "devDependencies": {
+        "@montagejs/rollup-plugin-generate-style": "workspace:^0.0.8",
         "postcss": "^8.4.21"
     }
 }
