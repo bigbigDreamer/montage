@@ -42,6 +42,7 @@
         "@types/fs-extra": "^9.0.13",
         "@types/jsonfile": "^6.1.0",
         "@types/lodash": "^4.14.185",
-        "@types/shelljs": "^0.8.11"
+        "@types/shelljs": "^0.8.11",
+        "postcss": "^8.4.21"
     }
 }

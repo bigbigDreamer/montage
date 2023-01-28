@@ -21,5 +21,8 @@
         "commander": "^9.4.1",
         "consola": "^2.15.3",
         "just-task": "^1.7.0"
+    },
+    "devDependencies": {
+        "postcss": "^8.4.21"
     }
 }

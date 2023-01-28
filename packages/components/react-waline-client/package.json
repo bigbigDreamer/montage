@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/react-waline-client",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "react waline client",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -36,5 +36,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-waline-client"
+    },
+    "devDependencies": {
+        "postcss": "^8.4.21"
     }
 }

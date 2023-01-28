@@ -16,6 +16,7 @@
         "zod": "^3.19.1"
     },
     "devDependencies": {
+        "postcss": "^8.4.21",
         "webpack": "^5.74.0"
     }
 }

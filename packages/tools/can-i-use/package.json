@@ -30,5 +30,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/tools/can-i-use"
+    },
+    "devDependencies": {
+        "postcss": "^8.4.21"
     }
 }

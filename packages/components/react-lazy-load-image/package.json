@@ -36,5 +36,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-lazy-load-image"
+    },
+    "devDependencies": {
+        "postcss": "^8.4.21"
     }
 }

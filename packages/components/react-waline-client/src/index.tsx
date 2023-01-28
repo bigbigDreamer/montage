@@ -3,7 +3,6 @@ import { init } from '@waline/client';
 import classes from 'classnames';
 
 import '@waline/client/dist/waline.css';
-console.log(111);
 import './index.less';
 
 import type { WalineInstance, WalineInitOptions } from '@waline/client';
@@ -38,7 +37,7 @@ const ReactWalineClient = forwardRef<CRefProps, ReactWalineClientProps>(
         }, []);
 
         useImperativeHandle(ref, () => ({
-            update: (props) => walineInstanceRef.current?.update?.({ ...props }),
+            update: props => walineInstanceRef.current?.update?.({ ...props }),
         }));
 
         return <div ref={containerRef} className={containerCls} style={style} />;
