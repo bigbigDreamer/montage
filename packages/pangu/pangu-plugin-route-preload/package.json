@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/pangu-plugin-route-preload",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "react pangu for react router",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -38,7 +38,7 @@
         "url": "https://github.com/bigbigDreamer/montage/tree/main/packages/components/react-waline-client"
     },
     "devDependencies": {
-        "@montagejs/pangu": "workspace:^0.1.5",
+        "@montagejs/pangu": "workspace:^0.1.7",
         "@types/react": "17.0.2",
         "@types/react-loadable": "^5.5.6"
     }

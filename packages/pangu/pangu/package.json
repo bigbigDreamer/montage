@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/pangu",
-    "version": "0.1.5",
+    "version": "0.1.7",
     "description": "react pangu for react router",
     "main": "./lib/index.js",
     "module": "./es/index.js",

@@ -1,5 +1,17 @@
 # @montagejs/pangu
 
+## 0.1.7
+
+### Patch Changes
+
+-   [`02cb5ce`](https://github.com/bigbigDreamer/montage/commit/02cb5ce) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - typro: pangu update
+
+## 0.1.6
+
+### Patch Changes
+
+-   [`02cb5ce`](https://github.com/bigbigDreamer/montage/commit/02cb5ce) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: rename plugin instance methord name
+
 ## 0.1.5
 
 ### Patch Changes

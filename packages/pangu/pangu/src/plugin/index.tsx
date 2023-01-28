@@ -42,7 +42,7 @@ class PluginsEngine {
     }
 
     // when use qinkun or other
-    destory() {
+    destroy() {
         this.plugins = [];
     }
 

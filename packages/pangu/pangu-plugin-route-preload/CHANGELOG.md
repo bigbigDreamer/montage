@@ -1,5 +1,11 @@
 # @montagejs/pangu-plugin-route-preload
 
+## 0.0.7
+
+### Patch Changes
+
+-   [`02cb5ce`](https://github.com/bigbigDreamer/montage/commit/02cb5ce) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - typro: pangu update
+
 ## 0.0.6
 
 ### Patch Changes

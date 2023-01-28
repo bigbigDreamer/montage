@@ -21,7 +21,7 @@ class PanGu {
 
     constructor(p: PanGuConstructorStruts = { routes: [] }) {
         // why ? because when pangu in qiankun or other micro env, it need reset
-        Plugins.destory();
+        Plugins.destroy();
         Object.assign(this, PanGu.defaultProps, p);
         this.#routerInstance = new Router({ routes: p.routes, mode: this.mode as RouterModeType });
     }
