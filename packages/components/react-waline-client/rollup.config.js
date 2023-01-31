@@ -24,18 +24,18 @@ export default {
     input: './src/index.tsx',
     output: [
         {
-            file: './lib/eslint.js',
+            file: './lib/index.js',
             sourcemap: true,
             format: 'cjs',
             esModule: false,
         },
         {
-            file: './es/eslint.js',
+            file: './es/index.js',
             sourcemap: true,
             format: 'esm',
         },
         {
-            file: './dist/eslint.js',
+            file: './dist/index.js',
             sourcemap: false,
             format: 'umd',
             name: 'ReactWalineClient',

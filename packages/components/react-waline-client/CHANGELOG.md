@@ -1,5 +1,11 @@
 # @montagejs/react-waline-client
 
+## 0.1.8
+
+### Patch Changes
+
+-   [`af40ab5`](https://github.com/bigbigDreamer/montage/commit/af40ab5) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: fix pkg entry file is error file name?!
+
 ## 0.1.7
 
 ### Patch Changes

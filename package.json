@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@montagejs/changelog-montage": "workspace:^1.2.3",
+    "@montagejs/react-waline-client": "workspace:^0.1.7",
     "@montagejs/rollup-plugin-generate-style": "0.0.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",
@@ -70,6 +71,7 @@
     "eslint-plugin-react": "^7.24.0",
     "fs-extra": "^10.1.0",
     "gh-pages": "4.0.0",
+    "jsdom": "^21.1.0",
     "less": "^4.1.3",
     "lint-staged": "13.0.3",
     "nx": "14.4.2",

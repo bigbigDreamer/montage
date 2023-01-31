@@ -1,6 +1,6 @@
 import { cleanup } from '@testing-library/react';
 
-window.fetch = vi.fn().mockImplementation(() => new Promise((res) => res));
+window.fetch = vi.fn().mockImplementation(() => new Promise(res => res));
 
 // hooks are reset before each suite
 afterEach(() => {
@@ -17,3 +17,13 @@ expect.extend({
         };
     },
 });
+
+interface ToBeNotNullMatchers {
+    toBeNotNull(): void;
+}
+
+declare global {
+    namespace Vi {
+        interface Assertion extends ToBeNotNullMatchers {}
+    }
+}
