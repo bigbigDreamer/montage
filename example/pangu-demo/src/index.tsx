@@ -22,6 +22,7 @@ const app = new PanGu({
     routes: RouterConfig,
 });
 
+app.use(innerPlugin, {}, { single: true });
 app.use(innerPlugin);
 app.use(routePreloadPlugin);
 

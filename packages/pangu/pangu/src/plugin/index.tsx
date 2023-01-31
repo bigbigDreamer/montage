@@ -7,6 +7,8 @@ import type { ReactElement, ReactNode } from 'react';
 import type { LoadableComponent } from 'react-loadable';
 import type { PanGuRouteObject } from '../router';
 
+import { ErrorLog } from '../helper';
+
 export type RoutePlugin = {
     key?: string | number | unknown;
     inner?(
@@ -29,12 +31,29 @@ export enum PluginTypes {
 
 class PluginsEngine {
     private plugins: { instance: RoutePlugin; options?: unknown }[];
+    private pluginsInstances: WeakMap<RoutePlugin, unknown> = new WeakMap<RoutePlugin, unknown>();
+    private pluginsSingleMark: WeakMap<RoutePlugin, boolean> = new WeakMap<RoutePlugin, boolean>();
     constructor() {
         this.plugins = [];
     }
 
-    set(plugin: RoutePlugin, options?: unknown) {
-        this.plugins.push({ instance: plugin, options });
+    set({ plugin, options, single }: { plugin: RoutePlugin; options?: unknown; single?: boolean }) {
+        // use setUp had existed or inside mark had existed
+        if (single || this.pluginsSingleMark.has(plugin)) {
+            !this.pluginsInstances.has(plugin) && this.plugins.push({ instance: plugin, options });
+            this.pluginsInstances.has(plugin) && console.warn(ErrorLog.PluginHadExist);
+        } else {
+            this.plugins.push({ instance: plugin, options });
+        }
+
+        if (!this.pluginsInstances.has(plugin)) {
+            this.pluginsInstances.set(plugin, plugin?.key || Symbol(`PANGU_PLUGIN_KEY`));
+        }
+
+        // only had single setUp
+        if (!this.pluginsSingleMark.has(plugin) && single) {
+            this.pluginsSingleMark.set(plugin, true);
+        }
     }
 
     get() {

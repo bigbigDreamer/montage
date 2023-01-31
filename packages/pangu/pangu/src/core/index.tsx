@@ -31,8 +31,8 @@ class PanGu {
         ReactDOM.render(App, this!.container as HTMLElement);
     }
 
-    use(plugin: RoutePlugin) {
-        Plugins.set(plugin);
+    use(plugin: RoutePlugin, options?: unknown, setUp?: { single?: boolean }) {
+        Plugins.set({ plugin, options, single: setUp?.single });
     }
 }
 
