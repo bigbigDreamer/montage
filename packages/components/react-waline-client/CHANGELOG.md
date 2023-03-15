@@ -1,5 +1,17 @@
 # @montagejs/react-waline-client
 
+## 0.1.10
+
+### Patch Changes
+
+-   [`738283a`](https://github.com/bigbigDreamer/montage/commit/738283a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - chore: bump version
+
+## 0.1.9
+
+### Patch Changes
+
+-   [`738283a`](https://github.com/bigbigDreamer/montage/commit/738283a) Thanks [@bigbigDreamer](https://github.com/bigbigDreamer)! - fix: lock @waline/client version to fix some bugs
+
 ## 0.1.8
 
 ### Patch Changes

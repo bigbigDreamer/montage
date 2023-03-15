@@ -21,7 +21,7 @@
         "@docusaurus/theme-live-codeblock": "^2.2.0",
         "@mdx-js/react": "^1.6.22",
         "@montagejs/react-lazy-load-image": "workspace:^0.0.12",
-        "@montagejs/react-waline-client": "workspace:^0.1.8",
+        "@montagejs/react-waline-client": "workspace:^0.1.10",
         "clsx": "^1.2.1",
         "docusaurus-plugin-less": "^2.0.2",
         "less": "^4.1.3",

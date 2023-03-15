@@ -1,6 +1,6 @@
 prefer-workspace-packages: true
 packages:
-  - 'packages/components/*'
+  - 'packages/components/**'
   - 'packages/plugins/*'
   - 'packages/tools/*'
   - 'packages/pangu/*'

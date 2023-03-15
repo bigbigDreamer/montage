@@ -13,5 +13,5 @@
     "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
         "updateInternalDependents": "always"
     },
-    "ignore": ["website", "pangu-demo", "webpack-demo", "ssr-demo", "fixtures", "components"]
+    "ignore": ["website", "pangu-demo", "webpack-demo", "ssr-demo", "components"]
 }

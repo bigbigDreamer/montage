@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@montagejs/react-waline-client": "workspace:^0.1.8"
+    "@montagejs/react-waline-client": "workspace:^0.1.10"
   }
 }

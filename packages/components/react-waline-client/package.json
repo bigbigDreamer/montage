@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/react-waline-client",
-    "version": "0.1.8",
+    "version": "0.1.10",
     "description": "react waline client",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -23,7 +23,7 @@
         "react": ">=16.8.0"
     },
     "dependencies": {
-        "@waline/client": "^2.6.1",
+        "@waline/client": "<=3.13.0",
         "classnames": "^2.3.1"
     },
     "files": [
