@@ -1,6 +1,6 @@
 {
     "name": "@montagejs/pangu",
-    "version": "0.1.7",
+    "version": "0.1.9",
     "description": "react pangu for react router",
     "main": "./lib/index.js",
     "module": "./es/index.js",
@@ -40,7 +40,8 @@
     },
     "files": [
         "es",
-        "lib"
+        "lib",
+        "tea.yaml"
     ],
     "homepage": "https://github.com/bigbigDreamer/montage/tree/main/packages/pangu/pangu",
     "repository": {
